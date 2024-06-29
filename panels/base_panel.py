@@ -35,6 +35,11 @@ class BasePanel(ScreenPanel):
         self.control['move'] = self._gtk.Button('move', scale=abscale)
         self.control['move'].connect("clicked", self.menu_item_clicked, self.move) 
         self.control['move'].set_no_show_all(True)
+        self.more = {
+            "panel": "more",
+        }
+        self.control['more'] = self._gtk.Button('settings', scale=abscale)
+        self.control['more'].connect("clicked", self._screen._go_to_submenu, "more")
         for control in self.control:
             self.set_control_sensitive(False, control)
         self.control['estop'] = self._gtk.Button('emergency', scale=abscale)
@@ -72,6 +77,7 @@ class BasePanel(ScreenPanel):
         self.action_bar.add(self.control['back'])
         self.action_bar.add(self.control['home'])
         self.action_bar.add(self.control['move'])
+        self.action_bar.add(self.control['more'])
         self.action_bar.add(self.control['printer_select'])
         self.action_bar.add(self.control['estop'])
         self.action_bar.add(self.control['shutdown'])
@@ -304,6 +310,7 @@ class BasePanel(ScreenPanel):
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.shorcut['panel'])
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.shutdown['panel'], control='shutdown')
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.move['panel'], control='move')
+        self.set_control_sensitive(self._screen._cur_panels[-1] != self.more['panel'], control='more')
 
     def show_printer_select(self, show=True):
         self.control['printer_select'].set_visible(
