@@ -54,9 +54,6 @@ class BasePanel(ScreenPanel):
             "panel": "gcode_macros",
             "icon": "custom-script",
         }
-        self.control['shortcut'] = self._gtk.Button(self.shorcut['icon'], scale=abscale)
-        self.control['shortcut'].connect("clicked", self.menu_item_clicked, self.shorcut)
-        self.control['shortcut'].set_no_show_all(True)
 
         # Any action bar button should close the keyboard
         for item in self.control:
@@ -76,7 +73,6 @@ class BasePanel(ScreenPanel):
         self.action_bar.add(self.control['home'])
         self.action_bar.add(self.control['move'])
         self.action_bar.add(self.control['printer_select'])
-        self.action_bar.add(self.control['shortcut'])
         self.action_bar.add(self.control['estop'])
         self.action_bar.add(self.control['shutdown'])
         self.show_printer_select(len(self._config.get_printers()) > 1)
@@ -295,7 +291,7 @@ class BasePanel(ScreenPanel):
     def remove(self, widget):
         self.content.remove(widget)
 
-    def set_control_sensitive(self, value=True, control='shortcut'):
+    def set_control_sensitive(self, value=True, control='shutdown'):
         self.control[control].set_sensitive(value)
 
     def show_shortcut(self, show=True):
@@ -305,7 +301,6 @@ class BasePanel(ScreenPanel):
             and self._printer.get_printer_status_data()["printer"]["gcode_macros"]["count"] > 0
             and self._screen._cur_panels[-1] != 'printer_select'
         )
-        self.control['shortcut'].set_visible(show)
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.shorcut['panel'])
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.shutdown['panel'], control='shutdown')
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.move['panel'], control='move')
