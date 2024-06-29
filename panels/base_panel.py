@@ -46,6 +46,7 @@ class BasePanel(ScreenPanel):
         }
         self.control['more'] = self._gtk.Button('settings', scale=abscale)
         self.control['more'].connect("clicked", self._screen._go_to_submenu, "more")
+        self.control['more'].set_no_show_all(True)
         for control in self.control:
             self.set_control_sensitive(False, control)
         self.control['estop'] = self._gtk.Button('emergency', scale=abscale)
@@ -207,6 +208,7 @@ class BasePanel(ScreenPanel):
         self.control['estop'].set_visible(printing)
         self.control['move'].set_visible(not printing)
         self.control['files'].set_visible(not printing)
+        self.control['more'].set_visible(not printing)
         self.show_shortcut(connected)
         self.show_heaters(connected)
         for control in ('back', 'home'):
