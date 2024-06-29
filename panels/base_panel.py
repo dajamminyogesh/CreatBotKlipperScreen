@@ -35,6 +35,12 @@ class BasePanel(ScreenPanel):
         self.control['move'] = self._gtk.Button('move', scale=abscale)
         self.control['move'].connect("clicked", self.menu_item_clicked, self.move) 
         self.control['move'].set_no_show_all(True)
+        self.files = {
+            "panel": "gcodes",
+        }
+        self.control['files'] = self._gtk.Button('files', scale=abscale)
+        self.control['files'].connect("clicked", self.menu_item_clicked, self.files)
+        self.control['files'].set_no_show_all(True)
         self.more = {
             "panel": "more",
         }
@@ -71,6 +77,7 @@ class BasePanel(ScreenPanel):
         self.action_bar.add(self.control['back'])
         self.action_bar.add(self.control['home'])
         self.action_bar.add(self.control['move'])
+        self.action_bar.add(self.control['files'])
         self.action_bar.add(self.control['more'])
         self.action_bar.add(self.control['printer_select'])
         self.action_bar.add(self.control['estop'])
@@ -199,6 +206,7 @@ class BasePanel(ScreenPanel):
         connected = self._printer and self._printer.state not in {'disconnected', 'startup', 'shutdown', 'error'}
         self.control['estop'].set_visible(printing)
         self.control['move'].set_visible(not printing)
+        self.control['files'].set_visible(not printing)
         self.show_shortcut(connected)
         self.show_heaters(connected)
         for control in ('back', 'home'):
@@ -301,6 +309,7 @@ class BasePanel(ScreenPanel):
         )
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.shorcut['panel'])
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.move['panel'], control='move')
+        self.set_control_sensitive(self._screen._cur_panels[-1] != self.files['panel'], control='files')
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.more['panel'], control='more')
 
     def show_printer_select(self, show=True):
