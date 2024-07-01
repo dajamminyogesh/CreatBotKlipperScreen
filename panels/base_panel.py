@@ -35,6 +35,13 @@ class BasePanel(ScreenPanel):
         self.control['move'] = self._gtk.Button('move', scale=abscale)
         self.control['move'].connect("clicked", self.menu_item_clicked, self.move) 
         self.control['move'].set_no_show_all(True)
+        self.extrude = {
+            "panel": "extrude",
+        }
+        self.control['extrude'] = self._gtk.Button('extrude', scale=abscale)
+        self.control['extrude'].connect("clicked", self.menu_item_clicked, self.extrude)
+        self.control['extrude'].set_no_show_all(True)
+
         self.files = {
             "panel": "gcodes",
         }
@@ -78,6 +85,7 @@ class BasePanel(ScreenPanel):
         self.action_bar.add(self.control['back'])
         self.action_bar.add(self.control['home'])
         self.action_bar.add(self.control['move'])
+        self.action_bar.add(self.control['extrude'])
         self.action_bar.add(self.control['files'])
         self.action_bar.add(self.control['more'])
         self.action_bar.add(self.control['printer_select'])
@@ -207,6 +215,7 @@ class BasePanel(ScreenPanel):
         connected = self._printer and self._printer.state not in {'disconnected', 'startup', 'shutdown', 'error'}
         self.control['estop'].set_visible(printing)
         self.control['move'].set_visible(not printing)
+        self.control['extrude'].set_visible(not printing)
         self.control['files'].set_visible(not printing)
         self.control['more'].set_visible(not printing)
         self.show_shortcut(connected)
@@ -311,6 +320,7 @@ class BasePanel(ScreenPanel):
         )
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.shorcut['panel'])
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.move['panel'], control='move')
+        self.set_control_sensitive(self._screen._cur_panels[-1] != self.extrude['panel'], control='extrude')
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.files['panel'], control='files')
         self.set_control_sensitive(self._screen._cur_panels[-1] != self.more['panel'], control='more')
 
