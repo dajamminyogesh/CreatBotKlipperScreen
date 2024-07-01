@@ -328,6 +328,11 @@ class KlipperScreen(Gtk.Window):
                 logging.info(f"Reinitializing panel {panel}")
                 self.panels[panel_name].__init__(self, title, **kwargs)
                 self.panels_reinit.remove(panel_name)
+            panels_to_keep = ['move', 'extrude', 'gcodes', 'more']
+            if (len(self._cur_panels) > 1 and panel_name in panels_to_keep):
+                while len(self._cur_panels) > 1:
+                    self._remove_current_panel()
+                    del self._cur_panels[-1]
             self._cur_panels.append(panel_name)
             self.attach_panel(panel_name)
         except Exception as e:

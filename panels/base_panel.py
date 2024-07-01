@@ -223,6 +223,11 @@ class BasePanel(ScreenPanel):
         self.show_heaters(connected)
         for control in ('back', 'home'):
             self.set_control_sensitive(len(self._screen._cur_panels) > 1, control=control)
+        panels_has_back = ['gcodes', 'temperature']
+        if not (len(self._screen._cur_panels) == 2 and self._screen._cur_panels[-1] in panels_has_back):
+            self.set_control_sensitive(False, 'back')
+        if (len(self._screen._cur_panels) > 2):
+            self.set_control_sensitive(True, 'back')
         self.current_panel = panel
         self.set_title(panel.title)
         self.content.add(panel.content)
@@ -309,7 +314,7 @@ class BasePanel(ScreenPanel):
     def remove(self, widget):
         self.content.remove(widget)
 
-    def set_control_sensitive(self, value=True, control='home'):
+    def set_control_sensitive(self, value=True, control='move'):
         self.control[control].set_sensitive(value)
 
     def show_shortcut(self, show=True):
