@@ -214,10 +214,11 @@ class BasePanel(ScreenPanel):
         printing = self._printer and self._printer.state in {"printing", "paused"}
         connected = self._printer and self._printer.state not in {'disconnected', 'startup', 'shutdown', 'error'}
         self.control['estop'].set_visible(printing)
-        self.control['move'].set_visible(not printing)
-        self.control['extrude'].set_visible(not printing)
-        self.control['files'].set_visible(not printing)
-        self.control['more'].set_visible(not printing)
+        self.control['move'].set_visible(not printing and connected)
+        self.control['extrude'].set_visible(not printing and connected)
+        self.control['files'].set_visible(not printing and connected)
+        self.control['more'].set_visible(not printing and connected)
+		self.control['home'].set_visible(connected)
         self.show_shortcut(connected)
         self.show_heaters(connected)
         for control in ('back', 'home'):
