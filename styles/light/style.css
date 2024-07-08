@@ -1,0 +1,339 @@
+/* Material-light theme created by Alfredo Monclus 2021 */
+@define-color bg rgba(250,250,250,0.2);
+@define-color bg_opa_100 rgba(250,250,250,1);
+@define-color text black;
+@define-color color1 rgba(250,251,253,0.8);
+@define-color color2 rgba(250,251,253,0.8);
+@define-color color3 rgba(250,251,253,0.8);
+@define-color color4 rgba(250,251,253,0.8);
+@define-color border #BDBDBD;
+@define-color active #0A59F7;
+@define-color warning #FFE082;
+@define-color error #EF9A9A;
+@define-color echo #a1ef9a;
+@define-color textview #212121;
+
+@define-color active_opa_50 rgba(10, 89, 247, 0.5);
+
+* {
+    color: @text ;
+}
+
+list row,
+treeview.view,
+window {
+    background-image: url("./styles/light/images/background-light.svg");
+    background-size: cover;
+}
+
+button {
+    background-color: @bg;
+    border-radius: 1em;
+}
+
+button label{
+    color: @text;
+}
+
+button:active {
+    background-color: @active;
+    border-radius: 1em;
+}
+
+.button_active {
+    border-color: @active_opa_50;
+    border-style: solid;
+    border-width: .1em;
+    background-color: @active_opa_50;
+    /* box-shadow: .1em .1em @border; */
+    border-radius: 1em;
+}
+
+button.color1 label,
+button.color2 label,
+button.color3 label,
+button.color4 label {
+    color: @text;
+}
+
+button.color1 {
+    border-style: none;
+    background-color: @color1;
+    border-color: @color1;
+    /* box-shadow: .1em .1em @border; */
+    border-radius: 1em;
+}
+
+button.color2 {
+    border-style: none;
+    background-color: @color2;
+    border-color: @color2;
+    /* box-shadow: .1em .1em @border; */
+    border-radius: 1em;
+}
+
+button.color3 {
+    border-style: none;
+    background-color: @color3;
+    border-color: @color3;
+    /* box-shadow: .1em .1em @border; */
+    border-radius: 1em;
+}
+
+button.color4 {
+    border-style: none;
+    background-color: @color4;
+    border-color: @color4;
+    /* box-shadow: .1em .1em @border; */
+    border-radius: 1em;
+}
+
+button.color1:active,
+button.color2:active,
+button.color3:active,
+button.color4:active,
+button.update:active,
+button.invalid:active,
+.dialog button:active {
+    background-color: @active;
+}
+
+button.active {
+    background-color: @active;
+}
+
+button.update {
+    background-color: @color3;
+    border-color: @color3;
+}
+
+button.invalid {
+    background-color: @error;
+    border-color: @error;
+}
+
+combobox window.popup {
+    background-color: @bg;
+}
+
+combobox button,
+combobox menuitem,
+combobox box button {
+    background-color: @bg_opa_100;
+    border-color: @border;
+}
+
+treeview.view check,
+switch {
+    background-color: @border;
+}
+
+treeview.view check:checked,
+switch:checked {
+    background-color: @active;
+}
+
+treeview.view check,
+switch slider {
+    border: .1em solid @color3;
+    background-color: rgba(0,0,0,0.4);
+}
+
+scale trough,
+progressbar trough {
+    border: 0.1em solid @bg;
+    background-color: rgba(0,0,0,0.3);
+}
+
+scale trough slider {
+    border: 0.1em solid @border;
+}
+
+entry {
+    border-color: @border;
+    border-style: solid;
+    border-width: .1em;
+    background-color: @bg_opa_100;
+}
+
+label {
+    color: @text;
+}
+
+menu {
+    background-color: @bg;
+    border-color: @border;
+}
+
+menuitem {
+    background-color: @bg;
+    border-color: @border;
+}
+
+trough {
+    background-color: transparent;
+    color: @border;
+    border-radius: 1em;
+}
+
+trough highlight,
+trough progress {
+    background-color: @active;
+    color: @bg;
+    border-color: @active;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+
+progressbar trough progress {
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+scale-mark {
+    color: @bg;
+}
+
+scrollbar,
+scrollbar button,
+scrollbar trough {
+    background-color: transparent;
+}
+
+scrollbar slider {
+    background-color: @border;
+}
+
+textview {
+    background-color: @textview;
+}
+
+textview .time {
+    color: @border;
+}
+
+.horizontal_togglebuttons  {
+    border-style: none;
+    border-color: @bg;
+    border-width: 0;
+    background-color: @color1;
+}
+
+.horizontal_togglebuttons_active {
+    background-color: @active_opa_50;
+    border-color: @active_opa_50;
+    border-style: solid;
+    border-width: .1em;
+}
+
+.horizontal_togglebuttons_active label {
+    color: @text;
+}
+
+.fan_slider {
+    color: @bg;
+}
+
+.frame-item {
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.message_popup {
+    border-bottom-color: @border;
+}
+
+.message_popup_echo,
+.message_popup_echo button {
+    background-color: @echo;
+}
+
+.message_popup_warning,
+.message_popup_warning button {
+    background-color: @warning;
+}
+
+.message_popup_error,
+.message_popup_error button {
+    background-color: @error;
+}
+
+.numpad_key {
+    border-color: @border;
+    background-color: @color1;
+}
+
+.printing-status {
+    color: @text;
+}
+
+.printing-progress-text {
+    color: @text;
+}
+
+.printing-status-label {
+    color: @text;
+}
+
+.message {
+    border-color: @error;
+    color: @bg;
+    background-color: @error;
+}
+
+.message button {
+    background-color: @bg;
+    color: @text;
+}
+
+.warning {
+    background-color: @warning;
+}
+
+.error {
+    background-color: @error;
+}
+
+.keyboard_pad {
+    background-color: @color1;
+}
+
+.dialog {
+    border: @border;
+    background-color: @border;
+}
+
+.dialog button {
+    border-style: none;
+    border-radius: .75em;
+}
+
+.dialog-error {
+    background-color: @error;
+    border-bottom-color: @error;
+}
+
+.dialog-warning {
+    background-color: @warning;
+    border-bottom-color: @warning;
+}
+
+.dialog-info {
+    background-color: @color4;
+    border-bottom-color: @color4;
+}
+
+.dialog-default {
+    background-color: @color3;
+    border-bottom-color: @color3;
+}
+
+.dialog-secondary {
+    background-color: @color2;
+    border-bottom-color: @color2;
+}
+
+.dialog-primary {
+    background-color: @color1;
+    border-bottom-color: @color1;
+}

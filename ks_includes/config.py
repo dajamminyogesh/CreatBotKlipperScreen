@@ -250,8 +250,8 @@ class KlipperScreenConfig:
             {"theme": {
                 "section": "main", "name": _("Icon Theme"), "type": "dropdown",
                 "tooltip": _("Changes how the interface looks"),
-                "value": "z-bolt", "callback": screen.change_theme, "options": [
-                    {"name": "Z-bolt" + " " + _("(default)"), "value": "z-bolt"}]}},
+                "value": "dark", "callback": screen.change_theme, "options": [
+                    {"name": "dark" + " " + _("(default)"), "value": "dark"}]}},
             {"print_estimate_method": {
                 "section": "main", "name": _("Estimated Time Method"), "type": "dropdown",
                 "tooltip": _("Changes how the time remaining is calculated"),
@@ -341,7 +341,7 @@ class KlipperScreenConfig:
         themes = [
             d for d in os.listdir(t_path)
             if (not os.path.isfile(os.path.join(t_path, d))
-                and d not in ("z-bolt", "printers"))
+                and d not in ("dark", "printers"))
         ]
         themes.sort()
 
