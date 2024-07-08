@@ -282,7 +282,7 @@ trough {
 }
 
 .action_bar :disabled{
-    opacity: .85;
+    opacity: 0;
 }
 
 .title_bar {
