@@ -18,7 +18,22 @@ class Panel(MenuPanel):
         self.active_heater = None
         self.h = self.f = 0
         self.main_menu = Gtk.Grid(row_homogeneous=True, column_homogeneous=True, hexpand=True, vexpand=True)
-        scroll = self._gtk.ScrolledWindow()
+
+        self.labels['menu'] = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0, homogeneous=False)
+        logo_image = self._gtk.Image("klipper", self._gtk.content_width * 0.2, self._gtk.content_height * 0.5)
+        self.labels['menu'].pack_start(logo_image, False, False, 80)
+        # temp_Button = self.arrangeMenuItems(items, 1, True)
+        temp_Button = self._gtk.Button("heat-up", _("Temperature"))
+        temp_Button.set_margin_start(120)
+        temp_Button.set_margin_end(120)
+        temp_Button.get_style_context().add_class('custom-temp-button')
+        self.temperature = {
+            "panel": "temperature",
+        }
+        temp_Button.connect("clicked", self.menu_item_clicked, self.temperature)
+        self.labels['menu'].pack_start(temp_Button, True, True, 0)
+        self.labels['da'] = HeaterGraph(self._screen, self._printer, self._gtk.font_size)
+        self.labels['devices'] = self.create_top_panel(self.labels['da'])
         self.numpad_visible = False
 
         logging.info("### Making MainMenu")
@@ -27,15 +42,13 @@ class Panel(MenuPanel):
         if stats["temperature_devices"]["count"] > 0 or stats["extruders"]["count"] > 0:
             self._gtk.reset_temp_color()
         if self._screen.vertical_mode:
-            self.main_menu.attach(self.create_left_panel(), 0, 0, 1, 3)
-            self.labels['menu'] = self.arrangeMenuItems(items, 3, True)
-            scroll.add(self.labels['menu'])
-            self.main_menu.attach(scroll, 0, 3, 1, 2)
+            self.main_menu.attach(self.labels['devices'], 0, 0, 2, 1)
+            self.main_menu.attach(self.labels['menu'], 0, 1, 1, 2)
+            self.main_menu.attach(self.labels['da'], 1, 1, 1, 2)
         else:
-            self.main_menu.attach(self.create_left_panel(), 0, 0, 1, 1)
-            self.labels['menu'] = self.arrangeMenuItems(items, 2, True)
-            scroll.add(self.labels['menu'])
-            self.main_menu.attach(scroll, 1, 0, 1, 1)
+            self.main_menu.attach(self.labels['devices'], 0, 0, 2, 1)
+            self.main_menu.attach(self.labels['menu'], 0, 1, 1, 2)
+            self.main_menu.attach(self.labels['da'], 1, 1, 1, 2)
         self.content.add(self.main_menu)
 
     def update_graph_visibility(self, force_hide=False):
@@ -54,8 +67,6 @@ class Panel(MenuPanel):
             else:
                 self.devices[device]['name'].get_style_context().remove_class("graph_label")
         if count > 0 and not force_hide:
-            if self.labels['da'] not in self.left_panel:
-                self.left_panel.add(self.labels['da'])
             self.labels['da'].queue_draw()
             self.labels['da'].show()
             if self.graph_update is None:
@@ -78,9 +89,9 @@ class Panel(MenuPanel):
             GLib.source_remove(self.graph_update)
             self.graph_update = None
         if self.active_heater is not None:
-            self.hide_numpad()
+            self.back()
 
-    def add_device(self, device):
+    def add_device(self, device, graph):
 
         logging.info(f"Adding device: {device}")
 
@@ -126,30 +137,45 @@ class Panel(MenuPanel):
         rgb = self._gtk.get_temp_color(dev_type)
 
         can_target = self._printer.device_has_target(device)
-        self.labels['da'].add_object(device, "temperatures", rgb, False, False)
+        graph.add_object(device, "temperatures", rgb, False, False)
         if can_target:
-            self.labels['da'].add_object(device, "targets", rgb, False, True)
+            graph.add_object(device, "targets", rgb, False, True)
         if self._show_heater_power and self._printer.device_has_power(device):
-            self.labels['da'].add_object(device, "powers", rgb, True, False)
+            graph.add_object(device, "powers", rgb, True, False)
 
-        name = self._gtk.Button(image, self.prettify(devname), None, self.bts, Gtk.PositionType.LEFT, 1)
-        name.connect("clicked", self.toggle_visibility, device)
-        name.set_alignment(0, .5)
+        # name = self._gtk.Button(image, self.prettify(devname), None, self.bts, Gtk.PositionType.TOP, 1)
+        name = self._gtk.Button()
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
+        name.add(vbox)
+        target = Gtk.Label()
+        target.set_text("")
+        vbox.pack_start(target, True, False, 5)
+        icon = self._gtk.Image(image)
+        vbox.pack_start(icon, True, False, 0)
+        temp = Gtk.Label()
+        temp.set_text("")
+        vbox.pack_start(temp, True, False, 0)
+        power = Gtk.Label()
+        power.set_text("")
+        vbox.pack_start(power, True, False, 0)
+        # name.connect("clicked", self.toggle_visibility, device)
+        # name.set_alignment(0, .5)
         name.get_style_context().add_class(class_name)
         visible = self._config.get_config().getboolean(f"graph {self._screen.connected_printer}", device, fallback=True)
         if visible:
             name.get_style_context().add_class("graph_label")
         self.labels['da'].set_showing(device, visible)
 
-        temp = self._gtk.Button(label="", lines=1)
         find_widget(temp, Gtk.Label).set_ellipsize(False)
         if can_target:
-            temp.connect("clicked", self.show_numpad, device)
+            name.connect("clicked", self.show_numpad, device)
 
         self.devices[device] = {
             "class": class_name,
             "name": name,
             "temp": temp,
+            "target": target,
+            "power": power,
             "can_target": can_target,
             "visible": visible
         }
@@ -158,8 +184,7 @@ class Panel(MenuPanel):
         pos = devices.index(device) + 1
 
         self.labels['devices'].insert_row(pos)
-        self.labels['devices'].attach(name, 0, pos, 1, 1)
-        self.labels['devices'].attach(temp, 1, pos, 1, 1)
+        self.labels['devices'].attach(name, pos, 0, 1, 1)
         self.labels['devices'].show_all()
         return True
 
@@ -192,7 +217,7 @@ class Panel(MenuPanel):
         else:
             logging.info(f"Unknown heater: {self.active_heater}")
             self._screen.show_popup_message(_("Unknown Heater") + " " + self.active_heater)
-
+        self.hide_numpad()
     def verify_max_temp(self, temp):
         temp = int(temp)
         max_temp = int(float(self._printer.get_config_section(self.active_heater)['max_temp']))
@@ -212,34 +237,35 @@ class Panel(MenuPanel):
                 "printer.gcode.script",
                 script
             )
+        self.back()
 
-    def create_left_panel(self):
+    def create_top_panel(self, graph):
 
         self.labels['devices'] = Gtk.Grid(vexpand=False)
         self.labels['devices'].get_style_context().add_class('heater-grid')
 
-        name = Gtk.Label()
-        temp = Gtk.Label(label=_("Temp (°C)"))
-        if self._show_heater_power:
-            temp.get_style_context().add_class("heater-grid-temp-power")
-        else:
-            temp.get_style_context().add_class("heater-grid-temp")
+        # name = Gtk.Label()
+        # temp = Gtk.Label(label=_("Temp (°C)"))
+        # if self._show_heater_power:
+        #     temp.get_style_context().add_class("heater-grid-temp-power")
+        # else:
+        #     temp.get_style_context().add_class("heater-grid-temp")
 
-        self.labels['devices'].attach(name, 0, 0, 1, 1)
-        self.labels['devices'].attach(temp, 1, 0, 1, 1)
+        # self.labels['devices'].attach(name, 0, 0, 1, 1)
+        # self.labels['devices'].attach(temp, 1, 0, 1, 1)
 
-        self.labels['da'] = HeaterGraph(self._screen, self._printer, self._gtk.font_size)
+        # self.labels['da'] = HeaterGraph(self._screen, self._printer, self._gtk.font_size)
 
         scroll = self._gtk.ScrolledWindow(steppers=False)
-        scroll.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
+        scroll.set_policy(Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.NEVER)
         scroll.get_style_context().add_class('heater-list')
         scroll.add(self.labels['devices'])
 
-        self.left_panel = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        self.left_panel = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         self.left_panel.add(scroll)
 
         for d in self._printer.get_temp_devices():
-            self.add_device(d)
+            self.add_device(d, graph)
 
         return self.left_panel
 
@@ -257,8 +283,10 @@ class Panel(MenuPanel):
             self.main_menu.attach(top, 0, 0, 1, 3)
             self.main_menu.attach(self.labels["menu"], 0, 3, 1, 2)
         else:
-            self.main_menu.remove_column(1)
-            self.main_menu.attach(self.labels["menu"], 1, 0, 1, 1)
+            self.main_menu.remove_column(0)
+            self.main_menu.attach(self.labels['devices'], 0, 0, 2, 1)
+            self.main_menu.attach(self.labels['menu'], 0, 1, 1, 2)
+            self.main_menu.attach(self.labels['da'], 1, 1, 1, 2)
         self.main_menu.show_all()
         self.numpad_visible = False
         self._screen.base_panel.set_control_sensitive(False, control='back')
@@ -299,8 +327,15 @@ class Panel(MenuPanel):
             self.main_menu.attach(top, 0, 0, 1, 2)
             self.main_menu.attach(self.labels["keypad"], 0, 2, 1, 2)
         else:
-            self.main_menu.remove_column(1)
-            self.main_menu.attach(self.labels["keypad"], 1, 0, 1, 1)
+            top = self.main_menu.get_child_at(0, 0)
+            temperature = self.main_menu.get_child_at(0, 1)
+            bottom = self.main_menu.get_child_at(1, 1)
+            self.main_menu.remove(top)
+            self.main_menu.remove(temperature)
+            self.main_menu.remove(bottom)
+            self.labels["keypad"].set_halign(Gtk.Align.CENTER)
+            self.labels["keypad"].set_size_request(400, -1)
+            self.main_menu.attach(self.labels["keypad"], 0, 0, 1, 1)
         self.main_menu.show_all()
         self.numpad_visible = True
         self._screen.base_panel.set_control_sensitive(True, control='back')

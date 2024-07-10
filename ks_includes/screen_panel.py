@@ -188,22 +188,30 @@ class ScreenPanel:
         return name
 
     def update_temp(self, dev, temp, target, power, lines=1, digits=1):
-        new_label_text = f"{temp or 0:.{digits}f}"
+        temp_label_text = f"{temp or 0:.{digits}f}"
+        target_label_text = "0"
+        power_label_text = ""
         if self._printer.device_has_target(dev) and target:
-            new_label_text += f"/{target:.0f}"
-        if dev not in self.devices:
-            new_label_text += "°"
+             target_label_text = f"{target:.0f}"
+        # if dev not in self.devices:
+        #     new_label_text += "°"
 
-        show_power = self._show_heater_power and power
-        if show_power:
-            new_label_text += f" {power * 100:3.0f}%"
+        if self._show_heater_power:
+            if target != 0:
+                power_label_text = "0%"
+            if power != 0:
+                power_label_text = f" {power * 100:3.0f}%"
 
+        temp_label_text += '℃'
+        target_label_text += '℃'
         if dev in self.labels:
             # Job_Status
-            find_widget(self.labels[dev], Gtk.Label).set_text(new_label_text)
+            find_widget(self.labels[dev], Gtk.Label).set_text(temp_label_text)
         elif dev in self.devices:
             # Temperature and Main_Menu
-            find_widget(self.devices[dev]["temp"], Gtk.Label).set_text(new_label_text)
+            find_widget(self.devices[dev]["target"], Gtk.Label).set_text(target_label_text)
+            find_widget(self.devices[dev]["temp"], Gtk.Label).set_text(temp_label_text)
+            find_widget(self.devices[dev]["power"], Gtk.Label).set_text(power_label_text)
 
     def add_option(self, boxname, opt_array, opt_name, option):
         if option['type'] is None:

@@ -38,7 +38,7 @@ class BasePanel(ScreenPanel):
         self.extrude = {
             "panel": "extrude",
         }
-        self.control['extrude'] = self._gtk.Button('extrude', scale=abscale)
+        self.control['extrude'] = self._gtk.Button('filament', scale=abscale)
         self.control['extrude'].connect("clicked", self.menu_item_clicked, self.extrude)
         self.control['extrude'].set_no_show_all(True)
 
@@ -73,7 +73,7 @@ class BasePanel(ScreenPanel):
             self.control[item].connect("clicked", self._screen.remove_keyboard)
 
         # Action bar
-        self.action_bar = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=5)
+        self.action_bar = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
         if self._screen.vertical_mode:
             self.action_bar.set_hexpand(True)
             self.action_bar.set_vexpand(False)
@@ -218,7 +218,7 @@ class BasePanel(ScreenPanel):
         self.control['extrude'].set_visible(not printing and connected)
         self.control['files'].set_visible(not printing and connected)
         self.control['more'].set_visible(not printing and connected)
-		self.control['home'].set_visible(connected)
+        self.control['home'].set_visible(connected)
         self.show_shortcut(connected)
         self.show_heaters(connected)
         for control in ('back', 'home'):

@@ -282,7 +282,8 @@ trough {
 }
 
 .action_bar :disabled{
-    opacity: 0;
+    opacity: 0.85;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .title_bar {
@@ -606,7 +607,7 @@ trough progress {
     padding-bottom: 0;
 }
 
-.graph_label {border-left-width: .4em; border-left-style: solid;}
+.graph_label {border-bottom-width: .2em; border-bottom-style: solid;}
 
 button.graph_label {padding-left: 0.15em;}
 

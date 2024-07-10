@@ -510,7 +510,7 @@ class KlipperScreen(Gtk.Window):
                     class_name = f".graph_label_heater_{category}"
                 else:
                     class_name = f".graph_label_{category}_{i + 1}"
-                css_data += f"\n{class_name} {{ border-left-color: #{color} }}"
+                css_data += f"\n{class_name} {{ border-bottom-color: #{color} }}"
         return css_data
 
     def update_style_provider(self, theme_css):

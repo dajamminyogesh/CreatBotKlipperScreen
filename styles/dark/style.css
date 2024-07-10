@@ -34,13 +34,13 @@
 list row,
 treeview.view,
 window {
-    background-image: url("./styles/dark/images/background-black.svg");
+    background-color: #0D0C1B;
     background-size: cover;
 }
 
 button {
 
-    background-color: @black-opa-10;
+    background-color: @white-opa-10;
     padding: 0px 0px;
     margin: 0px;
     border: 0.1px solid #000000;
@@ -117,6 +117,11 @@ button.invalid {
     border-bottom: .3em solid;
     border-bottom-color: @red-opa-100;
     border-radius: .75em;
+}
+
+.custom-temp-button {
+        background-color: rgba(0, 0, 0, 0);
+        border: 0px solid;
 }
 
 menu,
