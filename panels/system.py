@@ -28,14 +28,6 @@ class Panel(ScreenPanel):
         self.grid.attach(self.scales["cpu_usage"], 1, self.current_row, 1, 1)
         self.current_row += 1
 
-        for i in range(self.cpu_count):
-            self.labels[f"cpu_usage_{i}"] = Gtk.Label(label="", xalign=0)
-            self.grid.attach(self.labels[f"cpu_usage_{i}"], 0, self.current_row, 1, 1)
-            self.scales[f"cpu_usage_{i}"] = Gtk.ProgressBar(
-                hexpand=True, show_text=False, fraction=0
-            )
-            self.grid.attach(self.scales[f"cpu_usage_{i}"], 1, self.current_row, 1, 1)
-            self.current_row += 1
 
         self.labels["memory_usage"] = Gtk.Label(label="", xalign=0)
         self.grid.attach(self.labels["memory_usage"], 0, self.current_row, 1, 1)
@@ -133,13 +125,6 @@ class Panel(ScreenPanel):
             self.scales["cpu_usage"].set_fraction(
                 float(data["system_cpu_usage"]["cpu"]) / 100
             )
-            for i in range(self.cpu_count):
-                self.labels[f"cpu_usage_{i}"].set_label(
-                    f'CPU {i}: {data["system_cpu_usage"][f"cpu{i}"]:.0f}%'
-                )
-                self.scales[f"cpu_usage_{i}"].set_fraction(
-                    float(data["system_cpu_usage"][f"cpu{i}"]) / 100
-                )
 
             self.labels["memory_usage"].set_label(
                 _("Memory")
