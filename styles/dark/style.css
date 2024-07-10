@@ -59,7 +59,7 @@ button:active {
 
 button.color1 {
     border-radius: 0;
-    background-color: @black-opa-5;
+    background-color: @white-opa-10;
     padding: 0px 0px;
     margin: 0px;
     border: 0.8px solid #000000;
@@ -67,7 +67,7 @@ button.color1 {
 
 button.color2 {
     border-radius: 0;
-    background-color: @black-opa-5;
+    background-color: @white-opa-10;
     padding: 0px 0px;
     margin: 0px;
     border: 0.8px solid #000000;
@@ -75,7 +75,7 @@ button.color2 {
 
 button.color3 {
     border-radius: 0;
-    background-color: @black-opa-5;
+    background-color: @white-opa-10;
     padding: 0px 0px;
     margin: 0px;
     border: 0.8px solid #000000;
@@ -83,7 +83,7 @@ button.color3 {
 
 button.color4 {
     border-radius: 0;
-    background-color: @black-opa-5;
+    background-color: @white-opa-10;
     padding: 0px 0px;
     margin: 0px;
     border: 0.8px solid #000000;
@@ -201,8 +201,10 @@ textview .time {
 }
 
 .horizontal_togglebuttons {
-    border-color: @white-opa-30;
-    background-color: @black-opa-10;
+    border-width: 3;
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: @white-opa-10;
+    border-radius: 0;
 }
 
 .horizontal_togglebuttons_active {
