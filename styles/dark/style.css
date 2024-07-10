@@ -9,6 +9,7 @@
 
 @define-color black-opa-5 rgba(0, 0, 0, 0.05);
 @define-color black-opa-10 rgba(0, 0, 0, 0.1);
+@define-color black-opa-80 rgba(0, 0, 0, 0.8);
 
 @define-color blue-opa-10 rgba(29, 140, 198, 0.5);
 @define-color blue-opa-100 rgba(29, 140, 198, 1);
@@ -149,7 +150,7 @@ switch:checked {
 entry {
     background-color: @white-opa-20;
     border-color: @white-opa-100;
-    border-width: .1em;
+    border-width: 0;
 }
 
 label {
@@ -241,8 +242,10 @@ textview .time {
 }
 
 .numpad_key {
-    border-color: @white-opa-100;
-    background-color: @white-opa-20;
+    border-radius: 0;
+    border-width: 3;
+    border-color: @black-opa-80;
+    background-color: @white-opa-10;
 }
 
 .printing-status {

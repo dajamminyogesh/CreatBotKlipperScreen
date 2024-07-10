@@ -47,6 +47,7 @@ class Keypad(Gtk.Box):
 
         self.labels["keypad"] = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         self.labels['entry'] = Gtk.Entry()
+        self.labels['entry'].set_size_request(-1, 65)
         self.labels['entry'].props.xalign = 0.5
         self.labels['entry'].connect("activate", self.update_entry, "E")
 
@@ -68,6 +69,7 @@ class Keypad(Gtk.Box):
 
     def show_pid(self, can_pid):
         self.pid.set_visible(can_pid)
+        self.pid.set_sensitive(False)
 
     def clear(self):
         self.labels['entry'].set_text("")
