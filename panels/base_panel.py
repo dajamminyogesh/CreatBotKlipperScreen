@@ -315,8 +315,13 @@ class BasePanel(ScreenPanel):
         self.content.remove(widget)
 
     def set_control_sensitive(self, value=True, control='move'):
-        self.control[control].set_sensitive(value)
+        if control == 'back':
+            self.control[control].set_sensitive(value)
 
+        if value:
+            self.control[control].get_style_context().remove_class("button_active")
+        else:
+            self.control[control].get_style_context().add_class("button_active")
     def show_shortcut(self, show=True):
         show = (
             show
