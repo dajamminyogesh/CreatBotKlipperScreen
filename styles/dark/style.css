@@ -138,7 +138,11 @@ popover button {
 
 treeview.view check,
 switch {
+    border-radius: 0.5em;
     background-color: @white-opa-20;
+}
+switch slider {
+    border-radius: 0.5em;
 }
 
 treeview.view check:checked,
