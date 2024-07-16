@@ -33,7 +33,8 @@ class Panel(ScreenPanel):
 
         right_panel = self.create_right_panel()
         right_panel.set_halign(Gtk.Align.CENTER)
-        right_panel.set_size_request(400, -1)
+        right_panel.set_valign(Gtk.Align.CENTER)
+        right_panel.set_size_request(self._screen.width / 5 * 3, self._screen.height / 5 * 4)
         dev = self.create_left_panel()
         if self._screen.vertical_mode:
             self.grid.attach(right_panel, 0, 0, 1, 1)

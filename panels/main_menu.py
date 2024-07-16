@@ -19,13 +19,17 @@ class Panel(MenuPanel):
         self.h = self.f = 0
         self.main_menu = Gtk.Grid(row_homogeneous=True, column_homogeneous=True, hexpand=True, vexpand=True)
 
-        self.labels['menu'] = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0, homogeneous=False)
+        if self._screen.vertical_mode:
+            self.labels['menu'] = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=0, homogeneous=False)
+        else:
+            self.labels['menu'] = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0, homogeneous=False)
         logo_image = self._gtk.Image("klipper", self._gtk.content_width * 0.2, self._gtk.content_height * 0.5)
         self.labels['menu'].pack_start(logo_image, False, False, 80)
         # temp_Button = self.arrangeMenuItems(items, 1, True)
         temp_Button = self._gtk.Button("heat-up", _("Temperature"))
-        temp_Button.set_margin_start(120)
-        temp_Button.set_margin_end(120)
+        temp_Button.set_valign(Gtk.Align.CENTER)
+        temp_Button.set_halign(Gtk.Align.CENTER)
+        temp_Button.set_size_request(200, 100)
         temp_Button.get_style_context().add_class('custom-temp-button')
         temp_Button.connect('clicked', self.menu_item_clicked, {"panel": "temperature"})
         self.labels['menu'].pack_start(temp_Button, True, True, 0)
@@ -39,8 +43,8 @@ class Panel(MenuPanel):
             self._gtk.reset_temp_color()
         if self._screen.vertical_mode:
             self.main_menu.attach(self.labels['devices'], 0, 0, 2, 1)
-            self.main_menu.attach(self.labels['menu'], 0, 1, 1, 2)
-            self.main_menu.attach(self.labels['da'], 1, 1, 1, 2)
+            self.main_menu.attach(self.labels['da'], 0, 1, 2, 1)
+            self.main_menu.attach(self.labels['menu'], 0, 2, 2, 1)
         else:
             self.main_menu.attach(self.labels['devices'], 0, 0, 2, 1)
             self.main_menu.attach(self.labels['menu'], 0, 1, 1, 2)
