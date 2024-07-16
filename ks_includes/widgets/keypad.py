@@ -37,7 +37,7 @@ class Keypad(Gtk.Box):
             if keys[i][0] == "B":
                 self.labels[k_id] = self._gtk.Button("backspace", scale=1)
             elif keys[i][0] == "E":
-                self.labels[k_id] = self._gtk.Button("complete", scale=1)
+                self.labels[k_id] = self._gtk.Button("enter", scale=1)
             else:
                 self.labels[k_id] = Gtk.Button(label=keys[i][0])
             self.labels[k_id].connect('clicked', self.update_entry, keys[i][0])
