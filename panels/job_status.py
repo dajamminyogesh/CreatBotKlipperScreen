@@ -151,7 +151,7 @@ class Panel(ScreenPanel):
                                                                   Gtk.PositionType.LEFT, 1)
             self.buttons['extruder'][extruder].set_label(self.labels[extruder].get_text())
             self.buttons['extruder'][extruder].connect("clicked", self.menu_item_clicked,
-                                                       {"panel": "temperature",
+                                                       {"panel": "numpad",
                                                         'extra': extruder})
             self.buttons['extruder'][extruder].set_halign(Gtk.Align.START)
 
@@ -179,7 +179,7 @@ class Panel(ScreenPanel):
 
             self.buttons['heater'][dev].set_label(self.labels[dev].get_text())
             self.buttons['heater'][dev].connect("clicked", self.menu_item_clicked,
-                                                {"panel": "temperature", "extra": dev})
+                                                {"panel": "numpad", "extra": dev})
             self.buttons['heater'][dev].set_halign(Gtk.Align.START)
             self.labels['temp_grid'].attach(self.buttons['heater'][dev], n, 0, 1, 1)
             n += 1
@@ -203,7 +203,7 @@ class Panel(ScreenPanel):
                             self.labels[device] = Gtk.Label(label="-")
                             self.buttons['heater'][device].set_label(self.labels[device].get_text())
                             self.buttons['heater'][device].connect("clicked", self.menu_item_clicked,
-                                                                   {"panel": "temperature"})
+                                                                   {"panel": "numpad"})
                             self.buttons['heater'][device].set_halign(Gtk.Align.START)
                             self.labels['temp_grid'].attach(self.buttons['heater'][device], n, 0, 1, 1)
                             n += 1

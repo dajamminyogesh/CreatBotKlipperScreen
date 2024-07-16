@@ -334,14 +334,14 @@ class KlipperScreen(Gtk.Window):
                     self._remove_current_panel()
                     del self._cur_panels[-1]
             self._cur_panels.append(panel_name)
-            self.attach_panel(panel_name)
+            self.attach_panel(panel_name, **kwargs)
         except Exception as e:
             logging.exception(f"Error attaching panel:\n{e}\n\n{traceback.format_exc()}")
 
     def set_panel_title(self, title):
         self.base_panel.set_title(title)
 
-    def attach_panel(self, panel):
+    def attach_panel(self, panel, **kwargs):
         if panel in self.panels_reinit:
             # this happens when the first panel needs a reinit
             self.reload_panels()
@@ -354,6 +354,8 @@ class KlipperScreen(Gtk.Window):
             self.process_update("notify_status_update", self.printer.data)
         if hasattr(self.panels[panel], "activate"):
             self.panels[panel].activate()
+        if hasattr(self.panels[panel], "refresh"):
+            self.panels[panel].refresh(**kwargs)
         self.show_all()
 
     def log_notification(self, message, level=0):
