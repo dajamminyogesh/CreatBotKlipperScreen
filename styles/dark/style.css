@@ -125,6 +125,10 @@ button.invalid {
         border: 0px solid;
 }
 
+.custom-fan-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid;
+}
 menu,
 menuitem,
 combobox button,
@@ -173,8 +177,7 @@ trough progress {
     background-color: @blue-opa-100;
     color: @yellow-opa-100;
     border-color: @white-opa-50;
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
+    border-radius: 0.5em;
 }
 
 scale-mark {
@@ -185,6 +188,15 @@ scrollbar,
 scrollbar button,
 scrollbar trough {
     background-color: rgba(255, 255, 255, 0);
+}
+scale trough {
+    border-color: @blue-opa-10;
+    border-width: 2;
+}
+scale trough slider {
+    min-height: 2.5em;
+    min-width: 2.5em;
+    border-radius: 0.5em;
 }
 
 scrollbar slider {
