@@ -354,8 +354,8 @@ class KlipperScreen(Gtk.Window):
             self.process_update("notify_status_update", self.printer.data)
         if hasattr(self.panels[panel], "activate"):
             self.panels[panel].activate()
-        if hasattr(self.panels[panel], "refresh"):
-            self.panels[panel].refresh(**kwargs)
+        if hasattr(self.panels[panel], "active_refresh"):
+            self.panels[panel].active_refresh(**kwargs)
         self.show_all()
 
     def log_notification(self, message, level=0):

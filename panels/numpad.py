@@ -49,7 +49,7 @@ class Panel(ScreenPanel):
 
         return num_panel
 
-    def refresh(self, extra):
+    def active_refresh(self, extra):
         self.labels["keypad"].clear()
         self.active_heater = extra
         can_pid = (
