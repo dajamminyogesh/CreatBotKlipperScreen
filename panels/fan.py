@@ -69,10 +69,10 @@ class Panel(ScreenPanel):
         fan_col = Gtk.Box(spacing=5)
         fan_col.set_margin_start(30)
         fan_col.set_margin_end(30)
-        stop_btn = self._gtk.Button("fan-off", _("Min"), "custom-fan-button", position=Gtk.PositionType.BOTTOM)
+        stop_btn = self._gtk.Button("fan-off", _("Min"), "custom-icon-button", position=Gtk.PositionType.BOTTOM)
         stop_btn.set_hexpand(False)
         stop_btn.connect("clicked", self.update_fan_speed, fan, 0)
-        max_btn = self._gtk.Button("fan-on", _("Max"), "custom-fan-button", position=Gtk.PositionType.BOTTOM)
+        max_btn = self._gtk.Button("fan-on", _("Max"), "custom-icon-button", position=Gtk.PositionType.BOTTOM)
         max_btn.set_hexpand(False)
         max_btn.connect("clicked", self.update_fan_speed, fan, 100)
 

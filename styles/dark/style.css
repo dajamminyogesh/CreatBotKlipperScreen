@@ -120,14 +120,13 @@ button.invalid {
     border-radius: .75em;
 }
 
-.custom-temp-button {
-        background-color: rgba(0, 0, 0, 0);
-        border: 0px solid;
-}
-
-.custom-fan-button {
+.custom-icon-button {
     background-color: rgba(0, 0, 0, 0);
     border: 0px solid;
+}
+.custom-icon-button:active {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.4;
 }
 menu,
 menuitem,

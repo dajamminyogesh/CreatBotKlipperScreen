@@ -30,7 +30,7 @@ class Panel(MenuPanel):
         temp_Button.set_valign(Gtk.Align.CENTER)
         temp_Button.set_halign(Gtk.Align.CENTER)
         temp_Button.set_size_request(200, 100)
-        temp_Button.get_style_context().add_class('custom-temp-button')
+        temp_Button.get_style_context().add_class('custom-icon-button')
         temp_Button.connect('clicked', self.menu_item_clicked, {"panel": "temperature"})
         self.labels['menu'].pack_start(temp_Button, True, True, 0)
         self.labels['da'] = HeaterGraph(self._screen, self._printer, self._gtk.font_size)
