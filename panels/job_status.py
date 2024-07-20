@@ -109,6 +109,7 @@ class Panel(ScreenPanel):
         self.grid.attach(overlay, 0, 0, 1, 1)
 
         self.labels['thumbnail'] = self._gtk.Button("file")
+        self.labels['thumbnail'].get_style_context().add_class("custom-icon-button")
         self.labels['thumbnail'].connect("clicked", self.show_fullscreen_thumbnail)
         self.labels['info_grid'] = Gtk.Grid()
         self.labels['info_grid'].attach(self.labels['thumbnail'], 0, 0, 1, 1)
@@ -133,7 +134,7 @@ class Panel(ScreenPanel):
     def create_status_grid(self, widget=None):
         buttons = {
             'speed': self._gtk.Button("speed+", "-", None, self.bts, Gtk.PositionType.LEFT, 1),
-            'z': self._gtk.Button("home-z", "-", None, self.bts, Gtk.PositionType.LEFT, 1),
+            'z': self._gtk.Button("height", "-", None, self.bts, Gtk.PositionType.LEFT, 1),
             'extrusion': self._gtk.Button("extrude", "-", None, self.bts, Gtk.PositionType.LEFT, 1),
             'fan': self._gtk.Button("fan", "-", None, self.bts, Gtk.PositionType.LEFT, 1),
             'elapsed': self._gtk.Button("clock", "-", None, self.bts, Gtk.PositionType.LEFT, 1),
@@ -226,7 +227,7 @@ class Panel(ScreenPanel):
         self.status_grid = info
 
     def create_extrusion_grid(self, widget=None):
-        goback = self._gtk.Button("back", None, "color1", self.bts, Gtk.PositionType.TOP, False)
+        goback = self._gtk.Button("back", None, "custom-icon-button", self.bts, Gtk.PositionType.TOP, False)
         goback.connect("clicked", self.switch_info, self.status_grid)
         goback.set_hexpand(False)
         goback.get_style_context().add_class("printing-info")
@@ -248,7 +249,7 @@ class Panel(ScreenPanel):
         self.buttons['extrusion'].connect("clicked", self.switch_info, self.extrusion_grid)
 
     def create_move_grid(self, widget=None):
-        goback = self._gtk.Button("back", None, "color2", self.bts, Gtk.PositionType.TOP, False)
+        goback = self._gtk.Button("back", None, "custom-icon-button", self.bts, Gtk.PositionType.TOP, False)
         goback.connect("clicked", self.switch_info, self.status_grid)
         goback.set_hexpand(False)
         goback.get_style_context().add_class("printing-info")
@@ -277,7 +278,7 @@ class Panel(ScreenPanel):
         self.buttons['speed'].connect("clicked", self.switch_info, self.move_grid)
 
     def create_time_grid(self, widget=None):
-        goback = self._gtk.Button("back", None, "color3", self.bts, Gtk.PositionType.TOP, False)
+        goback = self._gtk.Button("back", None, "custom-icon-button", self.bts, Gtk.PositionType.TOP, False)
         goback.connect("clicked", self.switch_info, self.status_grid)
         goback.set_hexpand(False)
 
@@ -322,7 +323,7 @@ class Panel(ScreenPanel):
         ctx.translate(w / 2, h / 2)
         ctx.arc(0, 0, r, 0, 2 * pi)
         ctx.stroke()
-        ctx.set_source_rgb(0.718, 0.110, 0.110)
+        ctx.set_source_rgb(0.114, 0.550, 0.777)
         ctx.arc(0, 0, r, 3 / 2 * pi, 3 / 2 * pi + (self.progress * 2 * pi))
         ctx.stroke()
 
@@ -339,7 +340,7 @@ class Panel(ScreenPanel):
 
         self.buttons = {
             'cancel': self._gtk.Button("stop", _("Cancel"), "color2"),
-            'control': self._gtk.Button("settings", _("Settings"), "color3"),
+            'control': self._gtk.Button("more-settings", _("Settings"), "color3"),
             'fine_tune': self._gtk.Button("fine-tune", _("Fine Tuning"), "color4"),
             'menu': self._gtk.Button("complete", _("Main Menu"), "color4"),
             'pause': self._gtk.Button("pause", _("Pause"), "color1"),

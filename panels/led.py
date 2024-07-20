@@ -91,6 +91,7 @@ class Panel(ScreenPanel):
             color = [0, 0, 0, 0]
             color[idx] = 1
             button = self._gtk.Button()
+            button.get_style_context().add_class("custom-icon-button")
             preview = Gtk.DrawingArea(width_request=self.da_size, height_request=self.da_size)
             preview.connect("draw", self.on_draw, color)
             button.set_image(preview)

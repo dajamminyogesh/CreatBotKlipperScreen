@@ -79,7 +79,7 @@ class Panel(ScreenPanel):
         scale.get_style_context().add_class("option_slider")
         scale.connect("button-release-event", self.set_opt_value, option)
 
-        reset_button = self._gtk.Button("refresh", style="color1")
+        reset_button = self._gtk.Button("reset", style="color1")
         reset_button.connect("clicked", self.reset_value, option)
         reset_button.set_hexpand(False)
 

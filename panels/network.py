@@ -68,7 +68,7 @@ class Panel(ScreenPanel):
             self.labels['interface'].set_text(_("Interface") + f': {self.interface}')
             self.labels['ip'].set_text(f"IP: {self.sdbus_nm.get_ip_address()}")
 
-        self.reload_button = self._gtk.Button("refresh", None, "color1", self.bts)
+        self.reload_button = self._gtk.Button("refresh", None, "custom-icon-button", self.bts)
         self.reload_button.set_no_show_all(True)
         self.reload_button.show()
         self.reload_button.connect("clicked", self.reload_networks)
