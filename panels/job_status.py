@@ -474,17 +474,14 @@ class Panel(ScreenPanel):
 
         for x in self._printer.get_temp_devices():
             if x in data:
-                self.update_temp(
-                    x,
-                    self._printer.get_stat(x, "temperature"),
-                    self._printer.get_stat(x, "target"),
-                    self._printer.get_stat(x, "power"),
-                    digits=0
-                )
+                temp = round(self._printer.get_stat(x, "temperature"))
+                temp_target = round(self._printer.get_stat(x, "target"))
+                power = round(self._printer.get_stat(x, "power") * 100)                
+                temp_state = f"{temp}°/{temp_target}° {'{:3.0f}%'.format(power) if self._show_heater_power else ''}".strip()
                 if x in self.buttons['extruder']:
-                    self.buttons['extruder'][x].set_label(self.labels[x].get_text())
+                    self.buttons['extruder'][x].set_label(temp_state)
                 elif x in self.buttons['heater']:
-                    self.buttons['heater'][x].set_label(self.labels[x].get_text())
+                    self.buttons['heater'][x].set_label(temp_state)
 
         if "display_status" in data and "message" in data["display_status"]:
             self.labels['lcdmessage'].set_label(
