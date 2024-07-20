@@ -546,9 +546,9 @@ class Panel(ScreenPanel):
         fan_label = ""
         for fan in self.fans:
             self.fans[fan]['speed'] = f"{self._printer.get_fan_speed(fan) * 100:3.0f}%"
-            fan_label += f" {self.fans[fan]['name']}{self.fans[fan]['speed']}"
+            fan_label += f"C:{self.fans[fan]['speed']}" if fan == "fan" else f" {self.fans[fan]['name']}{self.fans[fan]['speed']}"
         if fan_label:
-            self.buttons['fan'].set_label(fan_label[:12])
+            self.buttons['fan'].set_label(fan_label[:13])
         if "print_stats" in data:
             if 'state' in data['print_stats']:
                 self.set_state(
