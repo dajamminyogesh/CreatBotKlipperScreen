@@ -514,13 +514,13 @@ trough {
 }
 
 .print-filename {
-    font-size: 1.1em;
+    font-size: 1em;
     margin-bottom: 0.2em;
 
 }
 
 .print-info {
-    font-size: 0.95em;
+    font-size: 0.85em;
 }
 
 .updater-item {
