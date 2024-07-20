@@ -69,10 +69,7 @@ class Panel(ScreenPanel):
 
         right = Gtk.Grid(row_homogeneous=True, column_homogeneous=True)
         right.attach(cooldown, 0, 0, 3, 1)
-        if self.show_preheat:
-            right.attach(self.preheat(), 0, 1, 3, 2)
-        else:
-            right.attach(self.delta_adjust(), 0, 1, 3, 2)
+        right.attach(self.preheat(), 0, 1, 3, 2)
         return right
 
 
