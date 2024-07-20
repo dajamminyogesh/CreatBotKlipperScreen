@@ -157,7 +157,7 @@ class Panel(ScreenPanel):
             self.buttons['extruder'][extruder].set_halign(Gtk.Align.START)
 
         self.labels['temp_grid'] = Gtk.Grid()
-        nlimit = 2 if self._screen.width <= 500 else 3
+        nlimit = 3 if self._screen.width <= 500 else 4
         n = 0
         if nlimit > 2 and len(self._printer.get_tools()) == 2:
             for extruder in self.buttons['extruder']:
@@ -174,6 +174,8 @@ class Panel(ScreenPanel):
                 break
             if dev == "heater_bed":
                 self.buttons['heater'][dev] = self._gtk.Button("bed", "", None, self.bts, Gtk.PositionType.LEFT, 1)
+            elif dev == "heater_generic chamber":
+                self.buttons['heater'][dev] = self._gtk.Button("chamber", "", None, self.bts, Gtk.PositionType.LEFT, 1)
             else:
                 self.buttons['heater'][dev] = self._gtk.Button("heater", "", None, self.bts, Gtk.PositionType.LEFT, 1)
             self.labels[dev] = Gtk.Label(label="-")
