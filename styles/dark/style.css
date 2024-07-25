@@ -143,6 +143,8 @@ treeview.view check,
 switch {
     border-radius: 0.5em;
     background-color: @white-opa-20;
+    min-height: 2.5em;
+    min-width: 5em;
 }
 switch slider {
     border-radius: 0.5em;
