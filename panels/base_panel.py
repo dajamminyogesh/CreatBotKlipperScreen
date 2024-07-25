@@ -27,6 +27,7 @@ class BasePanel(ScreenPanel):
         abscale = self.bts * 1.1
         self.control['back'] = self._gtk.Button('back', scale=abscale)
         self.control['back'].connect("clicked", self.back)
+        self.control['back'].set_no_show_all(True)
         self.control['home'] = self._gtk.Button('main', scale=abscale)
         self.control['home'].connect("clicked", self._screen._menu_go_back, True)
         self.move = {
@@ -226,10 +227,12 @@ class BasePanel(ScreenPanel):
         for control in ('back', 'home'):
             self.set_control_sensitive(len(self._screen._cur_panels) > 1, control=control)
         panels_has_back = ['gcodes', 'temperature']
-        if not (len(self._screen._cur_panels) == 2 and self._screen._cur_panels[-1] in panels_has_back):
-            self.set_control_sensitive(False, 'back')
-        if (len(self._screen._cur_panels) > 2):
-            self.set_control_sensitive(True, 'back')
+        cur_panel_count = len(self._screen._cur_panels)
+        is_last_panel_in_back_list = self._screen._cur_panels[-1] in panels_has_back
+        if cur_panel_count > 2 or is_last_panel_in_back_list:
+            self.control['back'].set_visible(True)
+        else:
+            self.control['back'].set_visible(False)
         self.current_panel = panel
         self.set_title(panel.title)
         self.content.add(panel.content)
@@ -316,14 +319,9 @@ class BasePanel(ScreenPanel):
     def remove(self, widget):
         self.content.remove(widget)
 
-    def set_control_sensitive(self, value=True, control='move'):
-        if control == 'back':
-            self.control[control].set_sensitive(value)
-
-        if value:
-            self.control[control].get_style_context().remove_class("button_active")
-        else:
-            self.control[control].get_style_context().add_class("button_active")
+    def set_control_sensitive(self, value=True, control='home'):
+        self.control[control].set_sensitive(value)
+        
     def show_shortcut(self, show=True):
         show = (
             show

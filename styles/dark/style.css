@@ -57,6 +57,10 @@ button:active {
     background-color: @blue-opa-10;
 }
 
+.action_bar :disabled{
+    background-color: rgba(20, 76, 112, 1);
+    opacity: 1;
+}
 button.color1 {
     border-radius: 0;
     background-color: @white-opa-10;
