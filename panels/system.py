@@ -88,7 +88,7 @@ class Panel(ScreenPanel):
         self.last_click_time = current_time
         if self.click_count == self.target_clicks:
             self.click_count = 0
-            self.load_menu("system", _("model"))
+            self.load_menu(self, "model", _("model select"))
 
     def set_mem_multiplier(self, data):
         memory_units = data.get("memory_units", "kB").lower()
