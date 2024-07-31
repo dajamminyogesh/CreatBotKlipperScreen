@@ -2,14 +2,14 @@
 @define-color bg rgba(250,250,250,0.2);
 @define-color bg_opa_100 rgba(250,250,250,1);
 @define-color text black;
-@define-color color1 rgba(250,251,253,0.8);
-@define-color color2 rgba(250,251,253,0.8);
-@define-color color3 rgba(250,251,253,0.8);
-@define-color color4 rgba(250,251,253,0.8);
+@define-color color1 rgba(255,255,255,1);
+@define-color color2 rgba(255,255,255,1);
+@define-color color3 rgba(255,255,255,1);
+@define-color color4 rgba(255,255,255,1);
 @define-color border #BDBDBD;
-@define-color active #0A59F7;
+@define-color active #E7E6EB;
 @define-color warning #FFE082;
-@define-color error #EF9A9A;
+@define-color error #D41216;
 @define-color echo #a1ef9a;
 @define-color textview #212121;
 
@@ -22,13 +22,14 @@
 list row,
 treeview.view,
 window {
-    background-image: url("./styles/light/images/background-light.svg");
+    background-color: #F3F2F7;
     background-size: cover;
 }
 
 button {
-    background-color: @bg;
-    border-radius: 1em;
+    background-color: rgba(255,255,255,1);
+    /* background-color: #FFFFFF; */
+    border-radius: 0.5em;
 }
 
 button label{
@@ -37,16 +38,34 @@ button label{
 
 button:active {
     background-color: @active;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 .button_active {
     border-color: @active_opa_50;
     border-style: solid;
-    border-width: .1em;
+    border-width: 0em;
     background-color: @active_opa_50;
-    /* box-shadow: .1em .1em @border; */
     border-radius: 1em;
+}
+.action_bar button{
+    background-color: rgba(255,255,255,1);
+    /* opacity: 0.4; */
+    border-width: 0em;
+    border-radius: 0em;
+    padding: 0px 0px;
+    margin: 0px;
+    border: 0.05px hidden #000000;
+}
+.action_bar button:active {
+    background-color: @active;
+    border-radius: 0.1em;
+}
+.action_bar :disabled{
+    background-color: #F3F2F7;
+    border-width: 0em;
+    border-radius: 0.5em;
+    opacity: 0.9;
 }
 
 button.color1 label,
@@ -113,7 +132,15 @@ button.invalid {
 }
 
 combobox window.popup {
-    background-color: @bg;
+    background-color: @bg_opa_100;
+}
+.custom-icon-button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0px solid;
+}
+.custom-icon-button:active {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0.4;
 }
 
 combobox button,
@@ -125,24 +152,30 @@ combobox box button {
 
 treeview.view check,
 switch {
-    background-color: @border;
+    background-color: #626A74;
+    border-radius: 0.5em;
+    min-height: 2.5em;
+    min-width: 5em;
 }
 
 treeview.view check:checked,
 switch:checked {
-    background-color: @active;
+    border-radius: 0.5em;
+    background-color: #34C85A;
 }
 
 treeview.view check,
 switch slider {
-    border: .1em solid @color3;
-    background-color: rgba(0,0,0,0.4);
+    border-radius: .5em;
+    border-color: @border;
+    border-style: solid;
+    border-width: .1em;
 }
 
 scale trough,
 progressbar trough {
     border: 0.1em solid @bg;
-    background-color: rgba(0,0,0,0.3);
+    background-color: #5E6A76;
 }
 
 scale trough slider {
@@ -173,22 +206,21 @@ menuitem {
 trough {
     background-color: transparent;
     color: @border;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 trough highlight,
 trough progress {
-    background-color: @active;
+    background-color: #FAFFFF;
     color: @bg;
     border-color: @active;
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-radius: 0.5em;
 }
 
 
 progressbar trough progress {
-    border-top-right-radius: 1em;
-    border-bottom-right-radius: 1em;
+    border-radius: 0.5em;
+    /* border-radius: 1em; */
 }
 
 scale-mark {
@@ -198,7 +230,16 @@ scale-mark {
 scrollbar,
 scrollbar button,
 scrollbar trough {
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0);
+}
+scale trough {
+    border-color: @blue-opa-10;
+    border-width: 2;
+}
+scale trough slider {
+    min-height: 2.5em;
+    min-width: 2.5em;
+    border-radius: 0.5em;
 }
 
 scrollbar slider {
@@ -212,6 +253,7 @@ textview {
 textview .time {
     color: @border;
 }
+.graph_label {border-bottom-width: 0.25em; border-bottom-style: solid;}
 
 .horizontal_togglebuttons  {
     border-style: none;
@@ -259,7 +301,9 @@ textview .time {
 }
 
 .numpad_key {
-    border-color: @border;
+    border-radius: 0.5em;
+    border-width: 3px;
+    border-color: rgba(0,0,0,0.1);
     background-color: @color1;
 }
 

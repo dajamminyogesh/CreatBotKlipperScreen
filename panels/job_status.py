@@ -344,7 +344,7 @@ class Panel(ScreenPanel):
             'cancel': self._gtk.Button("stop", _("Cancel"), "color2"),
             'control': self._gtk.Button("more-settings", _("Settings"), "color3"),
             'fine_tune': self._gtk.Button("fine-tune", _("Fine Tuning"), "color4"),
-            'menu': self._gtk.Button("complete", _("Main Menu"), "color4"),
+            'menu': self._gtk.Button("main-menu", _("Main Menu"), "color4"),
             'pause': self._gtk.Button("pause", _("Pause"), "color1"),
             'restart': self._gtk.Button("refresh", _("Restart"), "color3"),
             'resume': self._gtk.Button("resume", _("Resume"), "color1"),
