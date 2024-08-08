@@ -253,6 +253,18 @@ textview {
 textview .time {
     color: @border;
 }
+.filament_sensor {
+    border-radius: 0.5em;
+}
+.filament_sensor switch {
+    margin: 0;
+}
+.filament_sensor_detected {
+    background-color: @echo;
+}
+.filament_sensor_empty {
+    background-color: @error;
+}
 .graph_label {border-bottom-width: 0.25em; border-bottom-style: solid;}
 
 .horizontal_togglebuttons  {

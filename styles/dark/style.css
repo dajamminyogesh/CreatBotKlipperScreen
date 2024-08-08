@@ -11,7 +11,8 @@
 @define-color black-opa-10 rgba(0, 0, 0, 0.1);
 @define-color black-opa-80 rgba(0, 0, 0, 0.8);
 
-@define-color blue-opa-10 rgba(29, 140, 198, 0.5);
+@define-color blue-opa-20 rgba(29, 140, 198, 0.2);
+@define-color blue-opa-50 rgba(29, 140, 198, 0.5);
 @define-color blue-opa-100 rgba(29, 140, 198, 1);
 
 @define-color pale-cyan-opa-100 rgba(147, 161, 161, 1);
@@ -52,9 +53,9 @@ button:active {
 }
 
 .button_active {
-    border-color: @blue-opa-10;
+    border-color: @blue-opa-50;
     border-style: solid;
-    background-color: @blue-opa-10;
+    background-color: @blue-opa-50;
 }
 
 .action_bar :disabled{
@@ -100,8 +101,8 @@ button.color4:active,
 button.update:active,
 button.invalid:active,
 .dialog button:active {
-    background-color: @blue-opa-10;
-    border-color: @blue-opa-10;
+    background-color: @blue-opa-50;
+    border-color: @blue-opa-50;
 }
 
 button.active {
@@ -111,9 +112,7 @@ button.active {
 button.update {
     background-color: @white-opa-20;
     border: 0;
-    border-bottom: .3em solid;
-    border-bottom-color: @green-opa-100;
-    border-radius: .75em;
+    border-radius: .5em;
 }
 
 button.invalid {
@@ -195,7 +194,7 @@ scrollbar trough {
     background-color: rgba(255, 255, 255, 0);
 }
 scale trough {
-    border-color: @blue-opa-10;
+    border-color: @blue-opa-50;
     border-width: 2;
 }
 scale trough slider {
@@ -205,7 +204,7 @@ scale trough slider {
 }
 
 scrollbar slider {
-    background-color: @blue-opa-10;
+    background-color: @blue-opa-50;
 }
 
 textview .time {
@@ -221,6 +220,19 @@ textview .time {
     border-radius: 0;
 }
 
+.filament_sensor {
+    border-radius: 0.5em;
+}
+.filament_sensor switch {
+    margin: 0;
+}
+.filament_sensor_detected {
+    background-color: @blue-opa-20;
+}
+.filament_sensor_empty {
+    background-color: @red-opa-100;
+}
+
 .horizontal_togglebuttons {
     border-width: 3;
     border-color: rgba(0, 0, 0, 0.5);
@@ -229,7 +241,7 @@ textview .time {
 }
 
 .horizontal_togglebuttons_active {
-    background-color: @blue-opa-10;
+    background-color: @blue-opa-50;
     border-color: rgba(0, 0, 0, 0);
 }
 
