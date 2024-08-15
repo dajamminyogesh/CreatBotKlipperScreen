@@ -58,8 +58,10 @@ class Panel(ScreenPanel):
                          wrap=True, wrap_mode=Pango.WrapMode.WORD_CHAR)
         if fan == "fan":
             fan_name = _("Cooling fan")
-        elif fan.split()[1] == "Sink_fan":
-            fan_name = _("Sink fan")
+        elif fan.split()[1] == "Sink_fan_0":
+            fan_name = _("Sink fan")+" 0"
+        elif fan.split()[1] == "Sink_fan_1":
+            fan_name = _("Sink fan")+" 1"
         elif fan.split()[1] == "Air_filter_fan":
             fan_name = _("Air filter fan")
         else:

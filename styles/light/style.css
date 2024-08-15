@@ -174,7 +174,7 @@ switch slider {
 
 scale trough,
 progressbar trough {
-    border: 0.1em solid @bg;
+    border: 0.15em solid @bg;
     background-color: #5E6A76;
 }
 
@@ -223,7 +223,6 @@ trough progress {
 
 progressbar trough progress {
     border-radius: 0.5em;
-    /* border-radius: 1em; */
 }
 
 scale-mark {
