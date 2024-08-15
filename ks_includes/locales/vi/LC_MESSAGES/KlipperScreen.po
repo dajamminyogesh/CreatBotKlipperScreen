@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-06-02 12:00+0000\n"
 "Last-Translator: ChatGPT <noreply@openai.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/klipperscreen/"
@@ -41,6 +41,9 @@ msgstr "Chấp nhận"
 
 msgid "Add profile"
 msgstr "Thêm hồ sơ"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Tất cả"
@@ -186,7 +189,13 @@ msgstr "Bảng điều khiển"
 msgid "Cooldown"
 msgstr "Làm nguội"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -218,9 +227,6 @@ msgstr "Khoảng cách (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -259,6 +265,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Phương thức tính thời gian dự kiến"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Loại trừ vật in"
@@ -353,9 +362,6 @@ msgstr "Về trước"
 msgid "Height:"
 msgstr "Chiều cao:"
 
-msgid "Hide"
-msgstr "Ẩn"
-
 msgid "Hide sensors in Temp."
 msgstr "Ẩn các cảm biến trong nhệt."
 
@@ -401,9 +407,6 @@ msgstr "Bắt đầu hiệu chỉnh PID cho:"
 msgid "Input Shaper"
 msgstr "Bộ định hình đầu vào"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -433,6 +436,9 @@ msgstr "Có thể mất hơn 5 phút tùy thuộc vào công suất máy sưởi
 
 msgid "It's possible that the configuration is not correct"
 msgstr "Cấu hình có thể không chính xác"
+
+msgid "Job Status"
+msgstr ""
 
 msgid "Klipper Restart"
 msgstr "Khởi động lại Klipper"
@@ -492,9 +498,6 @@ msgstr "Mất kết nối tới Moonraker"
 msgid "Lower Nozzle"
 msgstr "Hạ đầu phun"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Lối tắt macro trên thanh bên"
-
 msgid "Macros"
 msgstr "Các macro"
 
@@ -539,6 +542,9 @@ msgstr "Menu"
 
 msgid "Mesh calibrate"
 msgstr "Cân chỉnh lưới"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr "Tỉ lệ tối thiểu"
@@ -606,6 +612,9 @@ msgstr "Nhật ký thông báo trống"
 msgid "Notifications"
 msgstr "Thông báo"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr "Chỉ dành cho bảng điều khiển di chuyển"
 
@@ -619,9 +628,6 @@ msgstr "PSK cho"
 msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "Gói sẽ được cập nhật"
-
-msgid "Part Fan"
-msgstr "Quạt phần"
 
 msgid "Password saved"
 msgstr "Mật khẩu đã lưu"
@@ -650,11 +656,14 @@ msgstr "Nguồn điện"
 msgid "Power On Printer"
 msgstr "Bật nguồn máy in"
 
+msgid "Pressure Advance"
+msgstr "Nâng áp suất"
+
 msgid "Pressure Advance:"
 msgstr "Nâng áp suất:"
 
-msgid "Pressure Advance"
-msgstr "Nâng áp suất"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "In"
@@ -771,14 +780,8 @@ msgstr "Ốc vít không được sử dụng:"
 msgid "Send"
 msgstr "Gửi"
 
-msgid "Set Temp"
-msgstr "Đặt Nhiệt độ"
-
 msgid "Settings"
 msgstr "Cài đặt"
-
-msgid "Show"
-msgstr "Hiển thị"
 
 msgid "Show Heater Power"
 msgstr "Hiển thị Công suất Bộ sưởi"
@@ -792,6 +795,9 @@ msgstr "Chỉ hiển thị các thiết bị có thể được đặt"
 msgid "Shutdown"
 msgstr "Tắt nguồn"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Kích thước"
 
@@ -803,6 +809,9 @@ msgstr "Phần mềm chia lớp:"
 
 msgid "Small"
 msgstr "Nhỏ"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Tốc độ (mm/s)"
@@ -847,9 +856,6 @@ msgstr "Tắt Hệ thống"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Nhiệt độ (°C)"
 
 msgid "Temperature"
 msgstr "Nhiệt độ"
@@ -904,6 +910,9 @@ msgstr "Hữu ích cho màn hình cảm ứng không phản hồi"
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC không được hỗ trợ bởi backend đang thử Stream"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "Tốc độ Di chuyển XY (mm/s)"
@@ -960,9 +969,33 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "giây"
+
+#~ msgid "Hide"
+#~ msgstr "Ẩn"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Lối tắt macro trên thanh bên"
+
+#~ msgid "Part Fan"
+#~ msgstr "Quạt phần"
+
+#~ msgid "Set Temp"
+#~ msgstr "Đặt Nhiệt độ"
+
+#~ msgid "Show"
+#~ msgstr "Hiển thị"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Nhiệt độ (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Hỗ trợ chính thức kết thúc vào tháng 6 năm 2023"
@@ -984,9 +1017,6 @@ msgstr[0] "giây"
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Hủy chọn"
 
 #~ msgid "Bed screw configuration:"
 #~ msgstr "Cấu hình ốc bàn in:"

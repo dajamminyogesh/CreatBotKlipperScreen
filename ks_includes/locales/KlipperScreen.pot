@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,6 +44,9 @@ msgid "Accept"
 msgstr ""
 
 msgid "Add profile"
+msgstr ""
+
+msgid "Air filter fan"
 msgstr ""
 
 msgid "All"
@@ -190,7 +193,13 @@ msgstr ""
 msgid "Cooldown"
 msgstr ""
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -222,9 +231,6 @@ msgstr ""
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -262,6 +268,9 @@ msgid "Estimated Time"
 msgstr ""
 
 msgid "Estimated Time Method"
+msgstr ""
+
+msgid "Example"
 msgstr ""
 
 msgid "Exclude Object"
@@ -357,9 +366,6 @@ msgstr ""
 msgid "Height:"
 msgstr ""
 
-msgid "Hide"
-msgstr ""
-
 msgid "Hide sensors in Temp."
 msgstr ""
 
@@ -405,9 +411,6 @@ msgstr ""
 msgid "Input Shaper"
 msgstr ""
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -436,6 +439,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr ""
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -496,9 +502,6 @@ msgstr ""
 msgid "Lower Nozzle"
 msgstr ""
 
-msgid "Macro shortcut on sidebar"
-msgstr ""
-
 msgid "Macros"
 msgstr ""
 
@@ -542,6 +545,9 @@ msgid "Menu"
 msgstr ""
 
 msgid "Mesh calibrate"
+msgstr ""
+
+msgid "Min"
 msgstr ""
 
 msgid "Minimum Cruise Ratio"
@@ -610,6 +616,9 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -624,9 +633,6 @@ msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] ""
 msgstr[1] ""
-
-msgid "Part Fan"
-msgstr ""
 
 msgid "Password saved"
 msgstr ""
@@ -655,10 +661,13 @@ msgstr ""
 msgid "Power On Printer"
 msgstr ""
 
+msgid "Pressure Advance"
+msgstr ""
+
 msgid "Pressure Advance:"
 msgstr ""
 
-msgid "Pressure Advance"
+msgid "Pressure advance"
 msgstr ""
 
 msgid "Print"
@@ -776,13 +785,7 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-msgid "Set Temp"
-msgstr ""
-
 msgid "Settings"
-msgstr ""
-
-msgid "Show"
 msgstr ""
 
 msgid "Show Heater Power"
@@ -797,6 +800,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr ""
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr ""
 
@@ -807,6 +813,9 @@ msgid "Slicer:"
 msgstr ""
 
 msgid "Small"
+msgstr ""
+
+msgid "Smooth time"
 msgstr ""
 
 msgid "Speed (mm/s)"
@@ -849,9 +858,6 @@ msgid "System Shutdown"
 msgstr ""
 
 msgid "System:"
-msgstr ""
-
-msgid "Temp (°C)"
 msgstr ""
 
 msgid "Temperature"
@@ -906,6 +912,9 @@ msgid "Useful for un-responsive touchscreens"
 msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
+msgstr ""
+
+msgid "Working"
 msgstr ""
 
 msgid "XY Move Speed (mm/s)"
@@ -965,6 +974,12 @@ msgid "mm/s²"
 msgstr ""
 
 msgid "mm³/s"
+msgstr ""
+
+msgid "model select"
+msgstr ""
+
+msgid "s"
 msgstr ""
 
 msgid "second"

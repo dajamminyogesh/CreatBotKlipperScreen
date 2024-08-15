@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-06-03 19:09+0000\n"
 "Last-Translator: Selim <selim_guner2000@hotmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/klipperscreen/"
@@ -46,6 +46,9 @@ msgstr "Kabul et"
 
 msgid "Add profile"
 msgstr "Profil ekle"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Tümü"
@@ -191,8 +194,14 @@ msgstr "Konsol"
 msgid "Cooldown"
 msgstr "Soğutma"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
 msgstr "Ağ eklenemedi"
+
+msgid "Current"
+msgstr ""
 
 msgid "Current percentage and graph line"
 msgstr "Mevcut yüzde ve grafik çizgisi"
@@ -224,9 +233,6 @@ msgstr "Uzaklık (mm)"
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
 msgstr "%s'i unutmak mı yoksa bağlantısını kesmek mi istiyorsunuz?"
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
-msgstr "KlipperScreen'in sorunu çözmeye çalışmasına izin vermek ister misiniz?"
 
 #, python-format
 msgid "Do you want to recover %s?"
@@ -264,6 +270,9 @@ msgstr "Tahmini Süre"
 
 msgid "Estimated Time Method"
 msgstr "Tahmini Zaman Metodu"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Nesneyi Hariç Tut"
@@ -358,9 +367,6 @@ msgstr "Geri git"
 msgid "Height:"
 msgstr "Yükseklik:"
 
-msgid "Hide"
-msgstr "Gizle"
-
 msgid "Hide sensors in Temp."
 msgstr "Sıcaklıktaki sensörleri gizleyin."
 
@@ -406,9 +412,6 @@ msgstr "PID kalibrasyonu başlatın:"
 msgid "Input Shaper"
 msgstr "İvme Düzenleyicisi"
 
-msgid "Insufficient priviledges detected"
-msgstr "Yetersiz ayrıcalık algılandı"
-
 msgid "Insufficient privileges"
 msgstr "Yetersiz ayrıcalıklar"
 
@@ -438,6 +441,9 @@ msgstr "Isıtıcı gücüne bağlı olarak 5 dakikadan fazla sürebilir."
 
 msgid "It's possible that the configuration is not correct"
 msgstr "Bu yapılandırmanın doğru olmama olasılığı var"
+
+msgid "Job Status"
+msgstr ""
 
 msgid "Klipper Restart"
 msgstr "Klipper Yeniden başlat"
@@ -497,9 +503,6 @@ msgstr "Moonraker ile Bağlantı Koptu"
 msgid "Lower Nozzle"
 msgstr "Nozzle düşür"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Kenar çubuğunda makro kısayolu"
-
 msgid "Macros"
 msgstr "Makrolar"
 
@@ -544,6 +547,9 @@ msgstr "Menü"
 
 msgid "Mesh calibrate"
 msgstr "Mesh Kalibre et"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr "Minimum Gezinme Oranı"
@@ -611,6 +617,9 @@ msgstr "Bildirim geçmişi boş"
 msgid "Notifications"
 msgstr "Bildirimler"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr "Sadece paneli taşımak için"
 
@@ -625,9 +634,6 @@ msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "Paket yükseltilecek"
 msgstr[1] "Paketler yükseltilecek"
-
-msgid "Part Fan"
-msgstr "Parça Fan"
 
 msgid "Password saved"
 msgstr "Şifre kaydedildi"
@@ -656,11 +662,14 @@ msgstr "Güç"
 msgid "Power On Printer"
 msgstr "Yazıcıya Güç Ver (aç)"
 
+msgid "Pressure Advance"
+msgstr "Akış Dengeleme"
+
 msgid "Pressure Advance:"
 msgstr "Akış Dengeleme:"
 
-msgid "Pressure Advance"
-msgstr "Akış Dengeleme"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Yazdır"
@@ -777,14 +786,8 @@ msgstr "Kullanılmayan vidalar:"
 msgid "Send"
 msgstr "Gönder"
 
-msgid "Set Temp"
-msgstr "Sıcaklık Ayarla"
-
 msgid "Settings"
 msgstr "Ayarlar"
-
-msgid "Show"
-msgstr "Göster"
 
 msgid "Show Heater Power"
 msgstr "Isıtıcı Gücünü Göster"
@@ -798,6 +801,9 @@ msgstr "Yalnızca ayarlanabilecek cihazları göster"
 msgid "Shutdown"
 msgstr "Kapat"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Boyut"
 
@@ -809,6 +815,9 @@ msgstr "Dilimleyici:"
 
 msgid "Small"
 msgstr "Küçük"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Hız (mm/s)"
@@ -851,9 +860,6 @@ msgstr "Sistem Kapat"
 
 msgid "System:"
 msgstr "Sistem:"
-
-msgid "Temp (°C)"
-msgstr "Sıcaklık (°C)"
 
 msgid "Temperature"
 msgstr "Sıcaklık"
@@ -908,6 +914,9 @@ msgstr "Yanıt vermeyen dokunmatik ekranlar için kullanışlıdır"
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC, Stream deneyin tarafından desteklenmez"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "XY Hareket hızı (mm/s)"
@@ -968,10 +977,41 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "saniye"
 msgstr[1] "saniyeler"
+
+#~ msgid "Do you want to let KlipperScreen try to solve the issue?"
+#~ msgstr ""
+#~ "KlipperScreen'in sorunu çözmeye çalışmasına izin vermek ister misiniz?"
+
+#~ msgid "Hide"
+#~ msgstr "Gizle"
+
+#~ msgid "Insufficient priviledges detected"
+#~ msgstr "Yetersiz ayrıcalık algılandı"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Kenar çubuğunda makro kısayolu"
+
+#~ msgid "Part Fan"
+#~ msgstr "Parça Fan"
+
+#~ msgid "Set Temp"
+#~ msgstr "Sıcaklık Ayarla"
+
+#~ msgid "Show"
+#~ msgstr "Göster"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Sıcaklık (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Resmi destek Haziran 2023 tarihinde sona ermiştir"
@@ -993,9 +1033,6 @@ msgstr[1] "saniyeler"
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Seçimi kaldır"
 
 #~ msgid "Select"
 #~ msgstr "Seç"
@@ -1092,9 +1129,6 @@ msgstr[1] "saniyeler"
 
 #~ msgid "View Mesh"
 #~ msgstr "Örgüyü Görüntüle"
-
-#~ msgid "Machine"
-#~ msgstr "Makine"
 
 #~ msgid "Sort by: "
 #~ msgstr "Sırala: "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: Dominik <dominik.sostar@gmail.com>\n"
 "Language-Team: Slovenian <https://hosted.weblate.org/projects/klipperscreen/"
@@ -16,8 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
-"n%100==4 ? 2 : 3;\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
 #, python-format
@@ -47,6 +47,9 @@ msgstr "Sprejmi"
 
 msgid "Add profile"
 msgstr "Dodaj profil"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Vse"
@@ -192,7 +195,13 @@ msgstr "Konzola"
 msgid "Cooldown"
 msgstr "Ohlajanje"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -224,9 +233,6 @@ msgstr "Razdalja (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -265,6 +271,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Način predvidenega časa"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Izključi predmet"
@@ -359,9 +368,6 @@ msgstr "Nazaj"
 msgid "Height:"
 msgstr "Višina:"
 
-msgid "Hide"
-msgstr "Skrij"
-
 msgid "Hide sensors in Temp."
 msgstr "Skrij senzorje v temp."
 
@@ -407,9 +413,6 @@ msgstr "Zaženite kalibracijo PID za:"
 msgid "Input Shaper"
 msgstr "Input Shaper"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -438,6 +441,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Lahko traja več kot 5 minut, odvisno od moči grelnika."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -500,9 +506,6 @@ msgstr "Izgubljena poveza z Moonrakerjem"
 msgid "Lower Nozzle"
 msgstr "Znižaj šobo"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Makro bližnjica na stranski vrstici"
-
 msgid "Macros"
 msgstr "Makri"
 
@@ -547,6 +550,9 @@ msgstr "Meni"
 
 msgid "Mesh calibrate"
 msgstr "Umeritev mreže"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -614,6 +620,9 @@ msgstr "Dnevnik obvestil je prazen"
 msgid "Notifications"
 msgstr "Obvestila"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -630,9 +639,6 @@ msgstr[0] "Paket bo posodobljen"
 msgstr[1] "Paketa bosta posodobljena"
 msgstr[2] "Paketi bodo posodobljeni"
 msgstr[3] "Paketov bo posodobljenih"
-
-msgid "Part Fan"
-msgstr "Ventilator za dele"
 
 msgid "Password saved"
 msgstr "Geslo shranjeno"
@@ -661,12 +667,14 @@ msgstr "Vklop"
 msgid "Power On Printer"
 msgstr "Vklopite tiskalnik"
 
+msgid "Pressure Advance"
+msgstr "Pressure Advance"
+
 msgid "Pressure Advance:"
 msgstr "Pressure Advance:"
 
-
-msgid "Pressure Advance"
-msgstr "Pressure Advance"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Natisni"
@@ -783,14 +791,8 @@ msgstr ""
 msgid "Send"
 msgstr "Pošlji"
 
-msgid "Set Temp"
-msgstr "Nastavi temperaturo"
-
 msgid "Settings"
 msgstr "Nastavitve"
-
-msgid "Show"
-msgstr "Pokaži"
 
 msgid "Show Heater Power"
 msgstr "Pokaži moč grelnika"
@@ -804,6 +806,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Zaustavitev"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Velikost"
 
@@ -815,6 +820,9 @@ msgstr "Slicer:"
 
 msgid "Small"
 msgstr "Majhno"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Hitrost (mm/s)"
@@ -857,9 +865,6 @@ msgstr "Zaustavitev sistema"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Temperatura (°C)"
 
 msgid "Temperature"
 msgstr "Temperatura"
@@ -913,6 +918,9 @@ msgid "Useful for un-responsive touchscreens"
 msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
+msgstr ""
+
+msgid "Working"
 msgstr ""
 
 msgid "XY Move Speed (mm/s)"
@@ -982,12 +990,36 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
+
+#~ msgid "Hide"
+#~ msgstr "Skrij"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Makro bližnjica na stranski vrstici"
+
+#~ msgid "Part Fan"
+#~ msgstr "Ventilator za dele"
+
+#~ msgid "Set Temp"
+#~ msgstr "Nastavi temperaturo"
+
+#~ msgid "Show"
+#~ msgstr "Pokaži"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Temperatura (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Konec uradne podpore junija 2023"
@@ -1009,9 +1041,6 @@ msgstr[3] ""
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Prekliči izbiro"
 
 #~ msgid "Select"
 #~ msgstr "Izberi"

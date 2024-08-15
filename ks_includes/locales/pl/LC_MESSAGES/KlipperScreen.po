@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Polish (KlipperScreen)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-16 18:02+0000\n"
 "Last-Translator: F1CU <ficu1234@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/klipperscreen/"
@@ -43,6 +43,9 @@ msgstr "Akceptuj"
 
 msgid "Add profile"
 msgstr "Dodaj profil"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Wszystkie"
@@ -188,7 +191,13 @@ msgstr "Konsola"
 msgid "Cooldown"
 msgstr "Studzenie"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -220,9 +229,6 @@ msgstr "Dystans (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -261,6 +267,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Metoda szacowanego czasu"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Wyklucz obiekt"
@@ -355,9 +364,6 @@ msgstr "Powróć"
 msgid "Height:"
 msgstr "Wysokość:"
 
-msgid "Hide"
-msgstr "Ukryj"
-
 msgid "Hide sensors in Temp."
 msgstr "Ukryj sensory w sekcji temperatur"
 
@@ -403,9 +409,6 @@ msgstr "Rozpoczęcie kalibracji PID dla:"
 msgid "Input Shaper"
 msgstr "Input Shaper"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -434,6 +437,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Może to potrwać dłużej niż 5 minut w zależności od mocy grzałki."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -496,9 +502,6 @@ msgstr "Utracono połączenie z Moonraker"
 msgid "Lower Nozzle"
 msgstr "Obniż dyszę"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Skrót do makr na pasku bocznym"
-
 msgid "Macros"
 msgstr "Makra"
 
@@ -543,6 +546,9 @@ msgstr "Menu"
 
 msgid "Mesh calibrate"
 msgstr "Kalibracja siatki"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -610,6 +616,9 @@ msgstr "Dziennik powiadomień jest pusty"
 msgid "Notifications"
 msgstr "Powiadomienia"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -625,9 +634,6 @@ msgid_plural "Packages will be updated"
 msgstr[0] "Pakiet zostanie zaktualizowany"
 msgstr[1] "Pakiety zostaną zaktualizowane"
 msgstr[2] "Pakietów zostanie zaktualizowanych"
-
-msgid "Part Fan"
-msgstr "Wentylator części"
 
 msgid "Password saved"
 msgstr "Hasło zostało zapisane"
@@ -656,11 +662,14 @@ msgstr "Zasilanie"
 msgid "Power On Printer"
 msgstr "Zasilanie włączone"
 
+msgid "Pressure Advance"
+msgstr "Pressure Advance"
+
 msgid "Pressure Advance:"
 msgstr "Pressure Advance:"
 
-msgid "Pressure Advance"
-msgstr "Pressure Advance"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Drukuj"
@@ -777,14 +786,8 @@ msgstr ""
 msgid "Send"
 msgstr "Wyślij"
 
-msgid "Set Temp"
-msgstr "Ustaw temperaturę"
-
 msgid "Settings"
 msgstr "Ustawienia"
-
-msgid "Show"
-msgstr "Pokaż"
 
 msgid "Show Heater Power"
 msgstr "Pokaż moc grzałki"
@@ -798,6 +801,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Wyłącz"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Rozmiar"
 
@@ -809,6 +815,9 @@ msgstr "Slicer:"
 
 msgid "Small"
 msgstr "Mały"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Prędkość (mm/s)"
@@ -851,9 +860,6 @@ msgstr "Wyłącz system"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Temperatura (°C)"
 
 msgid "Temperature"
 msgstr "Temperatura"
@@ -908,6 +914,9 @@ msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC nie jest wspierane przez backend próbujący streamować"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "Prędkość ruchu XY (mm/s)"
@@ -972,11 +981,35 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+
+#~ msgid "Hide"
+#~ msgstr "Ukryj"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Skrót do makr na pasku bocznym"
+
+#~ msgid "Part Fan"
+#~ msgstr "Wentylator części"
+
+#~ msgid "Set Temp"
+#~ msgstr "Ustaw temperaturę"
+
+#~ msgid "Show"
+#~ msgstr "Pokaż"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Temperatura (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Oficjalne wsparcie zakończyło się w czerwcu 2023"
@@ -998,9 +1031,6 @@ msgstr[2] ""
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Odznacz"
 
 #~ msgid "Select"
 #~ msgstr "Zaznacz"

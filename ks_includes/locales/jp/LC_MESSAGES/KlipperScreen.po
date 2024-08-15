@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/klipperscreen/"
@@ -41,6 +41,9 @@ msgstr "承諾する"
 
 msgid "Add profile"
 msgstr "プロファイルの追加"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr ""
@@ -186,7 +189,13 @@ msgstr "コンソール"
 msgid "Cooldown"
 msgstr "クールダウン"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -218,9 +227,6 @@ msgstr "距離(mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -259,6 +265,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "予定時刻"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "対象の除外"
@@ -353,9 +362,6 @@ msgstr "戻る"
 msgid "Height:"
 msgstr "高さ:"
 
-msgid "Hide"
-msgstr "隠す"
-
 msgid "Hide sensors in Temp."
 msgstr "温度を非表示にする"
 
@@ -401,9 +407,6 @@ msgstr ""
 msgid "Input Shaper"
 msgstr ""
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -432,6 +435,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr ""
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -492,9 +498,6 @@ msgstr ""
 msgid "Lower Nozzle"
 msgstr "ノズルが低い"
 
-msgid "Macro shortcut on sidebar"
-msgstr "サイドバーのマクロショートカット"
-
 msgid "Macros"
 msgstr "マクロ"
 
@@ -539,6 +542,9 @@ msgstr "メニュー"
 
 msgid "Mesh calibrate"
 msgstr "メッシュ較正"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -606,6 +612,9 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -619,9 +628,6 @@ msgstr ""
 msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] ""
-
-msgid "Part Fan"
-msgstr ""
 
 msgid "Password saved"
 msgstr "パスワードを保存しました"
@@ -650,10 +656,13 @@ msgstr "電源"
 msgid "Power On Printer"
 msgstr "プリンター電源"
 
+msgid "Pressure Advance"
+msgstr ""
+
 msgid "Pressure Advance:"
 msgstr ""
 
-msgid "Pressure Advance"
+msgid "Pressure advance"
 msgstr ""
 
 msgid "Print"
@@ -771,14 +780,8 @@ msgstr ""
 msgid "Send"
 msgstr ""
 
-msgid "Set Temp"
-msgstr "温度設定"
-
 msgid "Settings"
 msgstr "設定"
-
-msgid "Show"
-msgstr "表示"
 
 msgid "Show Heater Power"
 msgstr ""
@@ -792,6 +795,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "シャットダウン"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "サイズ"
 
@@ -803,6 +809,9 @@ msgstr "スライサー:"
 
 msgid "Small"
 msgstr "小"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr ""
@@ -845,9 +854,6 @@ msgstr "システムのシャットダウン"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "温度 (°C)"
 
 msgid "Temperature"
 msgstr "温度"
@@ -901,6 +907,9 @@ msgid "Useful for un-responsive touchscreens"
 msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
+msgstr ""
+
+msgid "Working"
 msgstr ""
 
 msgid "XY Move Speed (mm/s)"
@@ -958,9 +967,30 @@ msgstr ""
 msgid "mm³/s"
 msgstr ""
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
+
+#~ msgid "Hide"
+#~ msgstr "隠す"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "サイドバーのマクロショートカット"
+
+#~ msgid "Set Temp"
+#~ msgstr "温度設定"
+
+#~ msgid "Show"
+#~ msgstr "表示"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "温度 (°C)"
 
 #~ msgid "Hidden"
 #~ msgstr "非表示"
@@ -970,9 +1000,6 @@ msgstr[0] ""
 
 #~ msgid "Starting WiFi Association"
 #~ msgstr "Wifi接続開始中"
-
-#~ msgid "Deselect"
-#~ msgstr "選択解除"
 
 #~ msgid "Bed screw configuration:"
 #~ msgstr "ベッドスクリュー設定:"

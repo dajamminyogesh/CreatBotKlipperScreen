@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: bittin1ddc447d824349b2 <bittin@reimu.nl>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/klipperscreen/"
@@ -46,6 +46,9 @@ msgstr "Godkänn"
 
 msgid "Add profile"
 msgstr "Lägg till profil"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Alla"
@@ -191,7 +194,13 @@ msgstr "Konsol"
 msgid "Cooldown"
 msgstr "Nedkylning"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -223,9 +232,6 @@ msgstr "Avstånd (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -264,6 +270,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Beräknad tidsmetod"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Exkludera objekt"
@@ -358,9 +367,6 @@ msgstr "Gå tillbaka"
 msgid "Height:"
 msgstr "Höjd:"
 
-msgid "Hide"
-msgstr "Dölj"
-
 msgid "Hide sensors in Temp."
 msgstr "Dölj sensorer i Temp."
 
@@ -406,9 +412,6 @@ msgstr "Initiera en PID-kalibrering för:"
 msgid "Input Shaper"
 msgstr "Input Shaper"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -437,6 +440,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Det kan ta mer än 5 minuter beroende på värmarens effekt."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -498,9 +504,6 @@ msgstr ""
 msgid "Lower Nozzle"
 msgstr "Sänk munstycket"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Makro genväg på sidofältet"
-
 msgid "Macros"
 msgstr "Makron"
 
@@ -545,6 +548,9 @@ msgstr "Meny"
 
 msgid "Mesh calibrate"
 msgstr "Mesh kalibrera"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -612,6 +618,9 @@ msgstr "Aviseringsloggen tom"
 msgid "Notifications"
 msgstr "Aviseringar"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -626,9 +635,6 @@ msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "Paketet kommer att uppdateras"
 msgstr[1] "Paketen kommer att uppdateras"
-
-msgid "Part Fan"
-msgstr "Del Fläkt"
 
 msgid "Password saved"
 msgstr "Lösenordet har sparats"
@@ -657,11 +663,14 @@ msgstr "Ström"
 msgid "Power On Printer"
 msgstr "Slå på skrivaren"
 
+msgid "Pressure Advance"
+msgstr "Tryckförflyttning"
+
 msgid "Pressure Advance:"
 msgstr "Tryckförflyttning:"
 
-msgid "Pressure Advance"
-msgstr "Tryckförflyttning"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Skriv ut"
@@ -778,14 +787,8 @@ msgstr ""
 msgid "Send"
 msgstr "Skicka"
 
-msgid "Set Temp"
-msgstr "Sätt temperatur"
-
 msgid "Settings"
 msgstr "Inställningar"
-
-msgid "Show"
-msgstr "Visa"
 
 msgid "Show Heater Power"
 msgstr "Visa kraft värmare"
@@ -799,6 +802,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Stänga av"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Storlek"
 
@@ -810,6 +816,9 @@ msgstr "Slicer:"
 
 msgid "Small"
 msgstr "Liten"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Hastighet (mm/s)"
@@ -852,9 +861,6 @@ msgstr "System Avstängning"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Temperatur (°C)"
 
 msgid "Temperature"
 msgstr "Temperatur"
@@ -909,6 +915,9 @@ msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC stöds inte av backend provar Stream"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "XY rörelsehastighet (mm/s)"
@@ -969,10 +978,34 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 msgstr[1] ""
+
+#~ msgid "Hide"
+#~ msgstr "Dölj"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Makro genväg på sidofältet"
+
+#~ msgid "Part Fan"
+#~ msgstr "Del Fläkt"
+
+#~ msgid "Set Temp"
+#~ msgstr "Sätt temperatur"
+
+#~ msgid "Show"
+#~ msgstr "Visa"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Temperatur (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Avslutade officiellt stöd i juni 2023"
@@ -994,9 +1027,6 @@ msgstr[1] ""
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Avmarkera"
 
 #~ msgid "Select"
 #~ msgstr "Välj"

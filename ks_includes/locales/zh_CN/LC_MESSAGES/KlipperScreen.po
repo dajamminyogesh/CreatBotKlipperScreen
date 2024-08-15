@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-06-03 19:09+0000\n"
 "Last-Translator: wsj20050623 <2129426599@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
@@ -46,6 +46,9 @@ msgstr "确定"
 
 msgid "Add profile"
 msgstr "添加配置文件"
+
+msgid "Air filter fan"
+msgstr "过滤风扇"
 
 msgid "All"
 msgstr "全部"
@@ -191,8 +194,14 @@ msgstr "控制台"
 msgid "Cooldown"
 msgstr "冷却"
 
+msgid "Cooling fan"
+msgstr "冷却风扇"
+
 msgid "Couldn't add network"
 msgstr "无法添加网络"
+
+msgid "Current"
+msgstr "当前"
 
 msgid "Current percentage and graph line"
 msgstr "当前百分比和走线"
@@ -224,9 +233,6 @@ msgstr "挤出长度（mm）"
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
 msgstr "您要忘记或断开%s的连接吗?"
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
-msgstr "你想让KlipperScreen尝试解决这个问题吗?"
 
 #, python-format
 msgid "Do you want to recover %s?"
@@ -264,6 +270,9 @@ msgstr "预估时间"
 
 msgid "Estimated Time Method"
 msgstr "估算剩余时间方式"
+
+msgid "Example"
+msgstr "例子"
 
 msgid "Exclude Object"
 msgstr "排除对象"
@@ -358,9 +367,6 @@ msgstr "返回"
 msgid "Height:"
 msgstr "高度："
 
-msgid "Hide"
-msgstr "隐藏"
-
 msgid "Hide sensors in Temp."
 msgstr "在温度显示中隐藏传感器"
 
@@ -406,9 +412,6 @@ msgstr "启动PID校准："
 msgid "Input Shaper"
 msgstr "共振补偿"
 
-msgid "Insufficient priviledges detected"
-msgstr "检测到权限不足"
-
 msgid "Insufficient privileges"
 msgstr "权限不足"
 
@@ -438,6 +441,9 @@ msgstr "这可能需要5分钟以上的时间，这取决于加热器的功率�
 
 msgid "It's possible that the configuration is not correct"
 msgstr "设置文件可能存在错误"
+
+msgid "Job Status"
+msgstr "工作状态"
 
 msgid "Klipper Restart"
 msgstr "重启Klipper"
@@ -497,9 +503,6 @@ msgstr "与 Moonraker 失去连接"
 msgid "Lower Nozzle"
 msgstr "降低喷嘴"
 
-msgid "Macro shortcut on sidebar"
-msgstr "在侧边栏显示宏按钮"
-
 msgid "Macros"
 msgstr "宏"
 
@@ -544,6 +547,9 @@ msgstr "菜单"
 
 msgid "Mesh calibrate"
 msgstr "床网校准"
+
+msgid "Min"
+msgstr "最小"
 
 msgid "Minimum Cruise Ratio"
 msgstr "最小匀速运动比例"
@@ -611,6 +617,9 @@ msgstr "通知日志为空"
 msgid "Notifications"
 msgstr "通知"
 
+msgid "Numpad"
+msgstr "数字键盘"
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -624,9 +633,6 @@ msgstr "PSK"
 msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "软件包将被更新"
-
-msgid "Part Fan"
-msgstr "模型风扇"
 
 msgid "Password saved"
 msgstr "密码已保存"
@@ -655,10 +661,13 @@ msgstr "电源"
 msgid "Power On Printer"
 msgstr "打印机通电"
 
+msgid "Pressure Advance"
+msgstr "压力提前"
+
 msgid "Pressure Advance:"
 msgstr "压力提前："
 
-msgid "Pressure Advance"
+msgid "Pressure advance"
 msgstr "压力提前"
 
 msgid "Print"
@@ -776,14 +785,8 @@ msgstr "没有使用螺丝:"
 msgid "Send"
 msgstr "发送"
 
-msgid "Set Temp"
-msgstr "设定温度"
-
 msgid "Settings"
 msgstr "设置"
-
-msgid "Show"
-msgstr "显示"
 
 msgid "Show Heater Power"
 msgstr "显示加热器功率（%）"
@@ -797,6 +800,9 @@ msgstr "只显示可以设置的设备"
 msgid "Shutdown"
 msgstr "关闭"
 
+msgid "Sink fan"
+msgstr "散热风扇"
+
 msgid "Size"
 msgstr "大小"
 
@@ -808,6 +814,9 @@ msgstr "切片软件："
 
 msgid "Small"
 msgstr "小"
+
+msgid "Smooth time"
+msgstr "平滑时间"
 
 msgid "Speed (mm/s)"
 msgstr "速度（mm/s）"
@@ -850,9 +859,6 @@ msgstr "关闭系统"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "温度 （°C）"
 
 msgid "Temperature"
 msgstr "温度"
@@ -907,6 +913,9 @@ msgstr "可以改善反应慢的触屏"
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "不支持传送WebRTC至后台"
+
+msgid "Working"
+msgstr "工作中"
 
 msgid "XY Move Speed (mm/s)"
 msgstr "XY轴移动速度（mm/s）"
@@ -963,9 +972,39 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr "型号选择"
+
+msgid "s"
+msgstr "s"
+
 msgid "second"
 msgid_plural "seconds"
-msgstr[0] "第二"
+msgstr[0] "秒"
+
+#~ msgid "Do you want to let KlipperScreen try to solve the issue?"
+#~ msgstr "你想让KlipperScreen尝试解决这个问题吗?"
+
+#~ msgid "Hide"
+#~ msgstr "隐藏"
+
+#~ msgid "Insufficient priviledges detected"
+#~ msgstr "检测到权限不足"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "在侧边栏显示宏按钮"
+
+#~ msgid "Part Fan"
+#~ msgstr "模型风扇"
+
+#~ msgid "Set Temp"
+#~ msgstr "设定温度"
+
+#~ msgid "Show"
+#~ msgstr "显示"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "温度 （°C）"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "2023年6月结束官方支持"
@@ -987,9 +1026,6 @@ msgstr[0] "第二"
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "取消选择"
 
 #~ msgid "Select"
 #~ msgstr "选择"

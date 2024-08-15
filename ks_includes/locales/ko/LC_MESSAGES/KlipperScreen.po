@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/klipperscreen/"
@@ -41,6 +41,9 @@ msgstr "확인"
 
 msgid "Add profile"
 msgstr "프로파일 추가"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "전체"
@@ -186,7 +189,13 @@ msgstr "콘솔 제어"
 msgid "Cooldown"
 msgstr "가열 중지"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -218,9 +227,6 @@ msgstr "거리 (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -259,6 +265,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "예상 시간 옵션"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "개체 제외"
@@ -353,9 +362,6 @@ msgstr "뒤로"
 msgid "Height:"
 msgstr "높이:"
 
-msgid "Hide"
-msgstr "가리기"
-
 msgid "Hide sensors in Temp."
 msgstr "온도 섹션에서 센서 항목 숨김."
 
@@ -401,9 +407,6 @@ msgstr "PID 보정 대상:"
 msgid "Input Shaper"
 msgstr "인풋 쉐이퍼"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -432,6 +435,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "히터에 따라 5분 이상 걸릴 수 있습니다."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -493,9 +499,6 @@ msgstr "문레이커와 연결이 끊어졌습니다"
 msgid "Lower Nozzle"
 msgstr "노즐 낮춤"
 
-msgid "Macro shortcut on sidebar"
-msgstr "사이드바에 매크로 아이콘 표시"
-
 msgid "Macros"
 msgstr "매크로"
 
@@ -540,6 +543,9 @@ msgstr "메뉴"
 
 msgid "Mesh calibrate"
 msgstr "메쉬 보정"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr "최소 순항 비율"
@@ -607,6 +613,9 @@ msgstr "알림 로그가 비어 있음"
 msgid "Notifications"
 msgstr "공지"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -620,9 +629,6 @@ msgstr "PSK 키 값(비밀번호)"
 msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "패키지가 업데이트 됩니다"
-
-msgid "Part Fan"
-msgstr "파트 쿨링 팬"
 
 msgid "Password saved"
 msgstr "비밀번호 저장됨"
@@ -651,11 +657,14 @@ msgstr "전원"
 msgid "Power On Printer"
 msgstr "프린터 전원 켜기"
 
+msgid "Pressure Advance"
+msgstr "모서리 압출 제어 수치"
+
 msgid "Pressure Advance:"
 msgstr "모서리 압출 제어 수치:"
 
-msgid "Pressure Advance"
-msgstr "모서리 압출 제어 수치"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "출력"
@@ -772,14 +781,8 @@ msgstr ""
 msgid "Send"
 msgstr "보내기"
 
-msgid "Set Temp"
-msgstr "온도 설정"
-
 msgid "Settings"
 msgstr "설정"
-
-msgid "Show"
-msgstr "보기"
 
 msgid "Show Heater Power"
 msgstr "히터 전원 보기"
@@ -793,6 +796,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "시스템 종료"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "크기"
 
@@ -804,6 +810,9 @@ msgstr "슬라이서:"
 
 msgid "Small"
 msgstr "작게"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "속도 (mm/s)"
@@ -846,9 +855,6 @@ msgstr "시스템 종료"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "온도 (°C)"
 
 msgid "Temperature"
 msgstr "온도"
@@ -903,6 +909,9 @@ msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC는 백엔드 trying Stream에서 지원되지 않습니다"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "XY 이동 속도 (mm/s)"
@@ -959,9 +968,33 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
+
+#~ msgid "Hide"
+#~ msgstr "가리기"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "사이드바에 매크로 아이콘 표시"
+
+#~ msgid "Part Fan"
+#~ msgstr "파트 쿨링 팬"
+
+#~ msgid "Set Temp"
+#~ msgstr "온도 설정"
+
+#~ msgid "Show"
+#~ msgstr "보기"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "온도 (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "2023년 6월 이후 정식 지원이 중단됨"
@@ -983,9 +1016,6 @@ msgstr[0] ""
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "선택 해제"
 
 #~ msgid "Select"
 #~ msgstr "선택"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: Dr_Perry_Coke <dr.perrycoke@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/klipperscreen/"
@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 "X-Poedit-Flags-xgettext: --add-comments\n"
 
@@ -47,6 +47,9 @@ msgstr "Применить"
 
 msgid "Add profile"
 msgstr "Добавить профиль"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Все"
@@ -192,7 +195,13 @@ msgstr "Консоль"
 msgid "Cooldown"
 msgstr "Остудить"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -224,9 +233,6 @@ msgstr "Расстояние (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -265,6 +271,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Расчётное время"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Исключить Объект"
@@ -359,9 +368,6 @@ msgstr "Назад"
 msgid "Height:"
 msgstr "Высота:"
 
-msgid "Hide"
-msgstr "Скрывать"
-
 msgid "Hide sensors in Temp."
 msgstr "Скрыть датчики в Temp."
 
@@ -407,9 +413,6 @@ msgstr "Запустить калибровку ПИД-регулятора дл
 msgid "Input Shaper"
 msgstr "Входной шейпер"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -438,6 +441,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "В зависимости от мощности нагревателя это может занять более 5 минут."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -499,9 +505,6 @@ msgstr ""
 msgid "Lower Nozzle"
 msgstr "Опустить сопло"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Показать макросы в панели"
-
 msgid "Macros"
 msgstr "Макросы"
 
@@ -546,6 +549,9 @@ msgstr "Меню"
 
 msgid "Mesh calibrate"
 msgstr "Калибровка сетки"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -613,6 +619,9 @@ msgstr "Журнал уведомлений пуст"
 msgid "Notifications"
 msgstr "Уведомления"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -628,9 +637,6 @@ msgid_plural "Packages will be updated"
 msgstr[0] "Пакет будет обновлен"
 msgstr[1] "Пакеты будут обновляться"
 msgstr[2] "Пакеты будут обновляться"
-
-msgid "Part Fan"
-msgstr "Вентилятор обдува детали"
 
 msgid "Password saved"
 msgstr "Пароль сохранен"
@@ -659,11 +665,14 @@ msgstr "Питание"
 msgid "Power On Printer"
 msgstr "Включить принтер"
 
+msgid "Pressure Advance"
+msgstr "Повышение давления"
+
 msgid "Pressure Advance:"
 msgstr "Повышение давления:"
 
-msgid "Pressure Advance"
-msgstr "Повышение давления"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Печать"
@@ -780,14 +789,8 @@ msgstr ""
 msgid "Send"
 msgstr "Отправить"
 
-msgid "Set Temp"
-msgstr "Заданная температура"
-
 msgid "Settings"
 msgstr "Настройки"
-
-msgid "Show"
-msgstr "Показывать"
 
 msgid "Show Heater Power"
 msgstr "Показать мощность нагрева"
@@ -801,6 +804,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Выключить"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Размер"
 
@@ -812,6 +818,9 @@ msgstr "Слайсер:"
 
 msgid "Small"
 msgstr "Маленький"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Скорость (мм/с)"
@@ -854,9 +863,6 @@ msgstr "Выключить"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Температура (°С)"
 
 msgid "Temperature"
 msgstr "Tемпература"
@@ -912,6 +918,9 @@ msgstr ""
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr ""
 "Отсутствует поддержка WebRTC у бэкенда, который пытается передать поток"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "Скорость перемещения по осям XY (мм/с)"
@@ -976,11 +985,35 @@ msgstr "мм/с²"
 msgid "mm³/s"
 msgstr "мм³/с"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+
+#~ msgid "Hide"
+#~ msgstr "Скрывать"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Показать макросы в панели"
+
+#~ msgid "Part Fan"
+#~ msgstr "Вентилятор обдува детали"
+
+#~ msgid "Set Temp"
+#~ msgstr "Заданная температура"
+
+#~ msgid "Show"
+#~ msgstr "Показывать"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Температура (°С)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Официальная поддержка прекращена в июне 2023 г"
@@ -1002,9 +1035,6 @@ msgstr[2] ""
 
 #~ msgid "dBm"
 #~ msgstr "дБм"
-
-#~ msgid "Deselect"
-#~ msgstr "Отменить выбор"
 
 #~ msgid "Select"
 #~ msgstr "Выбирать"

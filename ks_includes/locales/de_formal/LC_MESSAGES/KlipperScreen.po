@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: Sucuk4mylife <civandenizsevin@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/klipperscreen/"
@@ -46,6 +46,9 @@ msgstr "OK"
 
 msgid "Add profile"
 msgstr "Profil hinzufügen"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Alle"
@@ -191,7 +194,13 @@ msgstr "Konsole"
 msgid "Cooldown"
 msgstr "Abkühlen"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -223,9 +232,6 @@ msgstr "Entfernung (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -264,6 +270,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Verbleibende Zeit"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Objekt ausschließen"
@@ -358,9 +367,6 @@ msgstr "Zurück"
 msgid "Height:"
 msgstr "Höhe:"
 
-msgid "Hide"
-msgstr "Verstecken"
-
 msgid "Hide sensors in Temp."
 msgstr "Sensoren in Temp ausblenden."
 
@@ -406,9 +412,6 @@ msgstr "Initiieren einer PID-Kalibrierung für:"
 msgid "Input Shaper"
 msgstr "Input Shaper"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -437,6 +440,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Je nach Leistung der Heizung kann dies mehr als 5 Minuten dauern."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -499,9 +505,6 @@ msgstr ""
 msgid "Lower Nozzle"
 msgstr "Düse absenken"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Makro Verknüpfung in Seitenleiste"
-
 msgid "Macros"
 msgstr "Makros"
 
@@ -546,6 +549,9 @@ msgstr "Menü"
 
 msgid "Mesh calibrate"
 msgstr "Mesh kalibrieren"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -613,6 +619,9 @@ msgstr ""
 msgid "Notifications"
 msgstr ""
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -627,9 +636,6 @@ msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "Paket wird aktualisiert"
 msgstr[1] "Pakete werden aktualisiert"
-
-msgid "Part Fan"
-msgstr "Bauteil Lüfter"
 
 msgid "Password saved"
 msgstr "Passwort gespeichert"
@@ -658,11 +664,14 @@ msgstr "Ein"
 msgid "Power On Printer"
 msgstr "Drucker einschalten"
 
+msgid "Pressure Advance"
+msgstr "Druckvorlauf"
+
 msgid "Pressure Advance:"
 msgstr "Druckvorlauf:"
 
-msgid "Pressure Advance"
-msgstr "Druckvorlauf"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Druck"
@@ -779,14 +788,8 @@ msgstr ""
 msgid "Send"
 msgstr "Senden"
 
-msgid "Set Temp"
-msgstr "Temp. einstellen"
-
 msgid "Settings"
 msgstr "Einstellungen"
-
-msgid "Show"
-msgstr "Zeigen"
 
 msgid "Show Heater Power"
 msgstr "Heizleistung anzeigen"
@@ -800,6 +803,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Ausschalten"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Größe"
 
@@ -811,6 +817,9 @@ msgstr "Slicer:"
 
 msgid "Small"
 msgstr "Klein"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Geschwindigkeit (mm/s)"
@@ -853,9 +862,6 @@ msgstr "System herunterfahren"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Temp (°C)"
 
 msgid "Temperature"
 msgstr "Temperatur"
@@ -911,6 +917,9 @@ msgid "Useful for un-responsive touchscreens"
 msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
+msgstr ""
+
+msgid "Working"
 msgstr ""
 
 msgid "XY Move Speed (mm/s)"
@@ -972,10 +981,34 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 msgstr[1] ""
+
+#~ msgid "Hide"
+#~ msgstr "Verstecken"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Makro Verknüpfung in Seitenleiste"
+
+#~ msgid "Part Fan"
+#~ msgstr "Bauteil Lüfter"
+
+#~ msgid "Set Temp"
+#~ msgstr "Temp. einstellen"
+
+#~ msgid "Show"
+#~ msgstr "Zeigen"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Temp (°C)"
 
 #~ msgid "Hidden"
 #~ msgstr "Versteckt"
@@ -988,9 +1021,6 @@ msgstr[1] ""
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Abwählen"
 
 #~ msgid "Select"
 #~ msgstr "Wählen"

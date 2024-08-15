@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-04-13 16:48+0000\n"
 "Last-Translator: Mikachu <micah.sh@proton.me>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/klipperscreen/"
@@ -46,6 +46,9 @@ msgstr "Accepteer"
 
 msgid "Add profile"
 msgstr "Profiel toevoegen"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Alles"
@@ -191,7 +194,13 @@ msgstr "Console"
 msgid "Cooldown"
 msgstr "Afkoelen"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
+msgstr ""
+
+msgid "Current"
 msgstr ""
 
 msgid "Current percentage and graph line"
@@ -223,9 +232,6 @@ msgstr "Afstand (mm)"
 
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
-msgstr ""
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
 msgstr ""
 
 #, python-format
@@ -264,6 +270,9 @@ msgstr ""
 
 msgid "Estimated Time Method"
 msgstr "Schatting Tijd Methode"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Uitsluiten Object"
@@ -358,9 +367,6 @@ msgstr "Ga Terug"
 msgid "Height:"
 msgstr "Hoogte:"
 
-msgid "Hide"
-msgstr "Verberg"
-
 msgid "Hide sensors in Temp."
 msgstr "Verberg sensoren in Temp."
 
@@ -406,9 +412,6 @@ msgstr "Initieer een PID-kalibratie voor:"
 msgid "Input Shaper"
 msgstr "Input Shaper"
 
-msgid "Insufficient priviledges detected"
-msgstr ""
-
 msgid "Insufficient privileges"
 msgstr ""
 
@@ -437,6 +440,9 @@ msgid "It may take more than 5 minutes depending on the heater power."
 msgstr "Het kan meer dan 5 minuten duren op basis van de heater power."
 
 msgid "It's possible that the configuration is not correct"
+msgstr ""
+
+msgid "Job Status"
 msgstr ""
 
 msgid "Klipper Restart"
@@ -499,9 +505,6 @@ msgstr "Verbinding met Moonraker verbroken"
 msgid "Lower Nozzle"
 msgstr "Onderste Nozzle"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Macro snelkoppeling in sidebar"
-
 msgid "Macros"
 msgstr "Macros"
 
@@ -546,6 +549,9 @@ msgstr "Menu"
 
 msgid "Mesh calibrate"
 msgstr "Mesh kalibreren"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr ""
@@ -613,6 +619,9 @@ msgstr "Notificatie log is leeg"
 msgid "Notifications"
 msgstr "Notificaties"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr ""
 
@@ -627,9 +636,6 @@ msgid "Package will be updated"
 msgid_plural "Packages will be updated"
 msgstr[0] "Pakket word ge-update"
 msgstr[1] "Pakketten worden ge-update"
-
-msgid "Part Fan"
-msgstr "Part Ventilator"
 
 msgid "Password saved"
 msgstr "Wachtwoord opgeslagen"
@@ -658,11 +664,14 @@ msgstr "Stroom"
 msgid "Power On Printer"
 msgstr "Printer Aanzetten"
 
+msgid "Pressure Advance"
+msgstr "Pressure Advance"
+
 msgid "Pressure Advance:"
 msgstr "Pressure Advance:"
 
-msgid "Pressure Advance"
-msgstr "Pressure Advance"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Print"
@@ -779,14 +788,8 @@ msgstr ""
 msgid "Send"
 msgstr "Verstuur"
 
-msgid "Set Temp"
-msgstr "Verander Temp"
-
 msgid "Settings"
 msgstr "Instellingen"
-
-msgid "Show"
-msgstr "Toon"
 
 msgid "Show Heater Power"
 msgstr "Toon Heater Stroom"
@@ -800,6 +803,9 @@ msgstr ""
 msgid "Shutdown"
 msgstr "Afsluiten"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Afmetingen"
 
@@ -811,6 +817,9 @@ msgstr "Slicer:"
 
 msgid "Small"
 msgstr "Klein"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Snelheid (mm/s)"
@@ -853,9 +862,6 @@ msgstr "Systeem Afsluiten"
 
 msgid "System:"
 msgstr ""
-
-msgid "Temp (°C)"
-msgstr "Temp (°C)"
 
 msgid "Temperature"
 msgstr "Temperatuur"
@@ -910,6 +916,9 @@ msgstr ""
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC is niet ondersteund door de backend"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "XY Move Snelheid (mm/s)"
@@ -970,10 +979,34 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] ""
 msgstr[1] ""
+
+#~ msgid "Hide"
+#~ msgstr "Verberg"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Macro snelkoppeling in sidebar"
+
+#~ msgid "Part Fan"
+#~ msgstr "Part Ventilator"
+
+#~ msgid "Set Temp"
+#~ msgstr "Verander Temp"
+
+#~ msgid "Show"
+#~ msgstr "Toon"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Temp (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Ondersteuning officieel beëindigt in juni 2023"
@@ -995,9 +1028,6 @@ msgstr[1] ""
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Deselecteer"
 
 #~ msgid "Select"
 #~ msgstr "Selecteer"

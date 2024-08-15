@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Czech\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-02 08:38-0300\n"
+"POT-Creation-Date: 2024-08-15 10:10+0800\n"
 "PO-Revision-Date: 2024-06-03 19:09+0000\n"
 "Last-Translator: Miloslav Kos <kos.m@post.cz>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/klipperscreen/"
@@ -46,6 +46,9 @@ msgstr "Přijmout"
 
 msgid "Add profile"
 msgstr "Přidat profil"
+
+msgid "Air filter fan"
+msgstr ""
 
 msgid "All"
 msgstr "Vše"
@@ -191,8 +194,14 @@ msgstr "Konsole"
 msgid "Cooldown"
 msgstr "Zchladit"
 
+msgid "Cooling fan"
+msgstr ""
+
 msgid "Couldn't add network"
 msgstr "Nepodařilo se přidat síť"
+
+msgid "Current"
+msgstr ""
 
 msgid "Current percentage and graph line"
 msgstr "Aktuální procento a linie grafu"
@@ -224,9 +233,6 @@ msgstr "Vzdálenost (mm)"
 #, python-format
 msgid "Do you want to forget or disconnect %s?"
 msgstr "Chcete zapomenout nebo se odpojit %s?"
-
-msgid "Do you want to let KlipperScreen try to solve the issue?"
-msgstr "Chcete nechat KlipperScreen, aby se pokusil problém vyřešit?"
 
 #, python-format
 msgid "Do you want to recover %s?"
@@ -264,6 +270,9 @@ msgstr "Odhadovaný čas"
 
 msgid "Estimated Time Method"
 msgstr "Výpočet doby tisku"
+
+msgid "Example"
+msgstr ""
 
 msgid "Exclude Object"
 msgstr "Vyloučit objekt"
@@ -358,9 +367,6 @@ msgstr "Zpět"
 msgid "Height:"
 msgstr "Výška:"
 
-msgid "Hide"
-msgstr "Skrýt"
-
 msgid "Hide sensors in Temp."
 msgstr "Skrýt senzory v Temp."
 
@@ -406,9 +412,6 @@ msgstr "Spustit PID kalibraci:"
 msgid "Input Shaper"
 msgstr "Kompenzace rezonancí"
 
-msgid "Insufficient priviledges detected"
-msgstr "Zjištěna nedostatečná oprávnění"
-
 msgid "Insufficient privileges"
 msgstr "Nedostatečná oprávnění"
 
@@ -438,6 +441,9 @@ msgstr "V závislosti na výkonu ohřívače to může trvat déle než 5 minut.
 
 msgid "It's possible that the configuration is not correct"
 msgstr "Je možné, že konfigurace není správná"
+
+msgid "Job Status"
+msgstr ""
 
 msgid "Klipper Restart"
 msgstr "Klipper Restart"
@@ -498,9 +504,6 @@ msgstr "Ztracené spojení s Moonrakerem"
 msgid "Lower Nozzle"
 msgstr "Trysku níž"
 
-msgid "Macro shortcut on sidebar"
-msgstr "Makro zkratka na postranním panelu"
-
 msgid "Macros"
 msgstr "Makra"
 
@@ -545,6 +548,9 @@ msgstr "Menu"
 
 msgid "Mesh calibrate"
 msgstr "Kalibrace sítě"
+
+msgid "Min"
+msgstr ""
 
 msgid "Minimum Cruise Ratio"
 msgstr "Minimální cestovní poměr"
@@ -612,6 +618,9 @@ msgstr "Protokol oznámení je prázdný"
 msgid "Notifications"
 msgstr "Oznámení"
 
+msgid "Numpad"
+msgstr ""
+
 msgid "Only for the move panel"
 msgstr "Pouze pro panel pohybů"
 
@@ -627,9 +636,6 @@ msgid_plural "Packages will be updated"
 msgstr[0] "Balíček bude aktualizován"
 msgstr[1] "Balíčky budou aktualizovány"
 msgstr[2] "Balíčky budou aktualizovány"
-
-msgid "Part Fan"
-msgstr "Částečný ofuk"
 
 msgid "Password saved"
 msgstr "Heslo uloženo"
@@ -658,11 +664,14 @@ msgstr "Zdroj"
 msgid "Power On Printer"
 msgstr "Zapni tiskárnu"
 
+msgid "Pressure Advance"
+msgstr "Pressure Advance"
+
 msgid "Pressure Advance:"
 msgstr "Pressure Advance:"
 
-msgid "Pressure Advance"
-msgstr "Pressure Advance"
+msgid "Pressure advance"
+msgstr ""
 
 msgid "Print"
 msgstr "Tisk"
@@ -779,14 +788,8 @@ msgstr "Nepoužívané šrouby:"
 msgid "Send"
 msgstr "Odeslat"
 
-msgid "Set Temp"
-msgstr "Nastav teplotu"
-
 msgid "Settings"
 msgstr "Nastavení"
-
-msgid "Show"
-msgstr "Ukaž"
 
 msgid "Show Heater Power"
 msgstr "Ukaž odběr topení"
@@ -800,6 +803,9 @@ msgstr "Zobrazit pouze zařízení, která lze nastavit"
 msgid "Shutdown"
 msgstr "Vypnout"
 
+msgid "Sink fan"
+msgstr ""
+
 msgid "Size"
 msgstr "Velikost"
 
@@ -811,6 +817,9 @@ msgstr "Slicer:"
 
 msgid "Small"
 msgstr "Malý"
+
+msgid "Smooth time"
+msgstr ""
 
 msgid "Speed (mm/s)"
 msgstr "Rychlost (mm/s)"
@@ -853,9 +862,6 @@ msgstr "Vypnutí"
 
 msgid "System:"
 msgstr "Systém:"
-
-msgid "Temp (°C)"
-msgstr "Teplota (°C)"
 
 msgid "Temperature"
 msgstr "Teplota"
@@ -910,6 +916,9 @@ msgstr "Užitečné pro nereagující dotykové obrazovky"
 
 msgid "WebRTC is not supported by the backend trying Stream"
 msgstr "WebRTC není podporováno backendem, který se pokouší spustit Stream"
+
+msgid "Working"
+msgstr ""
 
 msgid "XY Move Speed (mm/s)"
 msgstr "Rychlost pohybu XY (mm/s)"
@@ -974,11 +983,41 @@ msgstr "mm/s²"
 msgid "mm³/s"
 msgstr "mm³/s"
 
+msgid "model select"
+msgstr ""
+
+msgid "s"
+msgstr ""
+
 msgid "second"
 msgid_plural "seconds"
 msgstr[0] "sekunda"
 msgstr[1] "sekundy"
 msgstr[2] "sekundy"
+
+#~ msgid "Do you want to let KlipperScreen try to solve the issue?"
+#~ msgstr "Chcete nechat KlipperScreen, aby se pokusil problém vyřešit?"
+
+#~ msgid "Hide"
+#~ msgstr "Skrýt"
+
+#~ msgid "Insufficient priviledges detected"
+#~ msgstr "Zjištěna nedostatečná oprávnění"
+
+#~ msgid "Macro shortcut on sidebar"
+#~ msgstr "Makro zkratka na postranním panelu"
+
+#~ msgid "Part Fan"
+#~ msgstr "Částečný ofuk"
+
+#~ msgid "Set Temp"
+#~ msgstr "Nastav teplotu"
+
+#~ msgid "Show"
+#~ msgstr "Ukaž"
+
+#~ msgid "Temp (°C)"
+#~ msgstr "Teplota (°C)"
 
 #~ msgid "Ended official support in June 2023"
 #~ msgstr "Oficiální podpora ukončena v červnu 2023"
@@ -1000,9 +1039,6 @@ msgstr[2] "sekundy"
 
 #~ msgid "dBm"
 #~ msgstr "dBm"
-
-#~ msgid "Deselect"
-#~ msgstr "Odznačit"
 
 #~ msgid "Select"
 #~ msgstr "Vyber"
