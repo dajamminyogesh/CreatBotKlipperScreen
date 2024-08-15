@@ -73,6 +73,7 @@ class Panel(ScreenPanel):
         self.content.add(box)
 
         pobox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        pobox.get_style_context().add_class("measure_button")
         test_x = self._gtk.Button(label=_("Measure X"))
         test_x.connect("clicked", self.start_calibration, "x")
         pobox.pack_start(test_x, True, True, 5)

@@ -211,6 +211,9 @@ textview .time {
     color: @pale-cyan-opa-100;
 }
 
+.measure_button {
+    background-color: rgba(25, 24, 39, 1);
+}
 .dialog {
     background-color: @white-opa-10;
 }

@@ -217,6 +217,9 @@ trough progress {
     border-radius: 0.5em;
 }
 
+.measure_button {
+    background-color: @bg_opa_100;
+}
 
 progressbar trough progress {
     border-radius: 0.5em;
