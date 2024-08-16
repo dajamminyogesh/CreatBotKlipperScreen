@@ -108,12 +108,12 @@ class ModelConfig:
                     file.seek(0)
                     found_printer_section = False
                     for i, line in enumerate(lines):
-                        if line.strip().startswith("[include ../creatbot/"):
-                            lines[i] = f"[include ../creatbot/{device_name}.cfg]\n"
+                        if line.strip().startswith("[include ../../klipper/config/"):
+                            lines[i] = f"[include ../../klipper/config/{device_name}.cfg]\n"
                             found_printer_section = True
                             break
                     if not found_printer_section:
-                        lines.insert(0, f"[include ../creatbot/{device_name}.cfg]\n")
+                        lines.insert(0, f"[include ../../klipper/config/{device_name}.cfg]\n")
                     file.truncate(0)
                     file.writelines(lines)
 
