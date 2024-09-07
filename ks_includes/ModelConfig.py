@@ -102,27 +102,35 @@ class ModelConfig:
 
     def wirte_printer_config(self, device_name):
         if device_name:
+            source_path = f"{os.path.expanduser('~')}/klipper/config/{device_name}/"
+            target_path = f"{os.path.expanduser('~')}/printer_data/config/"
+            if not os.path.exists(target_path):
+                os.makedirs(target_path)
+            source_base_path = os.path.join(source_path, os.path.basename("base.cfg"))
+            target_base_path = os.path.join(target_path, os.path.basename("base.cfg"))
             try:
-                with open(self.printer_config_path, "r+") as file:
-                    lines = file.readlines()
-                    file.seek(0)
-                    found_printer_section = False
-                    for i, line in enumerate(lines):
-                        if line.strip().startswith("[include ../../klipper/config/"):
-                            lines[i] = f"[include ../../klipper/config/{device_name}.cfg]\n"
-                            found_printer_section = True
-                            break
-                    if not found_printer_section:
-                        lines.insert(0, f"[include ../../klipper/config/{device_name}.cfg]\n")
-                    file.truncate(0)
-                    file.writelines(lines)
+                if os.path.islink(target_base_path) or os.path.exists(target_base_path):
+                    os.remove(target_base_path)
+                os.symlink(source_base_path, target_base_path)
+                logging.info(f"Created config symlink for {device_name}.")
+            except FileExistsError:
+                logging.error(f"Failed to create config symlink for {device_name}.")
+            except PermissionError:
+                logging.error(f"No permission to create symlink for {device_name}.")
+            except Exception as e:
+                logging.error(f"Error creating symlink for{device_name}:{e}")
 
-                logging.info(f"Setting printer config to {device_name}")
+            source_printer_path = os.path.join(source_path, os.path.basename("printer.cfg"))
+            target_printer_path = os.path.join(target_path, os.path.basename("printer.cfg"))
+            command = ['cp','-f', source_printer_path, target_printer_path]
+            try:
+                subprocess.run(command, check=True, text=True, capture_output=True)
+                logging.info(f"Configuration file copied successfully. {source_printer_path}' to '{target_printer_path}'")
+            except subprocess.CalledProcessError as e:
+                logging.error(f"Copy error config file: {e.stderr}")
+            except Exception as e:
+                logging.error(f"Copy error printer file: {e.stderr}")
 
-            except FileNotFoundError:
-                logging.error(
-                    f"Configuration file {self.printer_config_path} not found."
-                )
 
     def generate_config(self, model):
         model_name = model
