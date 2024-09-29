@@ -263,14 +263,14 @@ class KlipperScreenConfig:
             {"screen_blanking": {
                 "section": "main", "name": _("Screen Power Off Time"), "type": "dropdown",
                 "tooltip": _("Timeout for screen black-out or power-off"),
-                "value": "3600", "callback": screen.set_screenblanking_timeout, "options": [
+                "value": "off", "callback": screen.set_screenblanking_timeout, "options": [
                     {"name": _("Never"), "value": "off"}]
             }},
             {"screen_blanking_printing": {
                 "section": "main", "name": _("Screen Power Off Time") + " (" + _("Printing") + ")",
                 "type": "dropdown",
                 "tooltip": _("Timeout for screen black-out or power-off during printing"),
-                "value": "3600", "callback": screen.set_screenblanking_printing_timeout, "options": [
+                "value": "off", "callback": screen.set_screenblanking_printing_timeout, "options": [
                     {"name": _("Never"), "value": "off"}]
             }},
             {"24htime": {"section": "main", "name": _("24 Hour Time"), "type": "binary",
@@ -279,15 +279,15 @@ class KlipperScreenConfig:
             {"font_size": {
                 "section": "main", "name": _("Font Size"), "type": "dropdown",
                 "tooltip": _("Inversely affects the icon size"),
-                "value": "medium", "callback": screen.restart_ks, "options": [
-                    {"name": _("Small"), "value": "small"},
-                    {"name": _("Medium") + " " + _("(default)"), "value": "medium"},
+                "value": "small", "callback": screen.restart_ks, "options": [
+                    {"name": _("Small") + " " + _("(default)"),"value": "small"},
+                    {"name": _("Medium"), "value": "medium"},
                     {"name": _("Large"), "value": "large"},
                     {"name": _("Extra Large"), "value": "extralarge"},
                     {"name": _("Maximum"), "value": "max"}]}},
             {"confirm_estop": {"section": "main", "name": _("Confirm Emergency Stop"), "type": "binary",
                                "tooltip": _("Asks for confirmation before stopping"),
-                               "value": "False"}},
+                               "value": "True"}},
             {"only_heaters": {"section": "main", "name": _("Hide sensors in Temp."), "type": "binary",
                               "tooltip": _("Show only devices that are able to be set"),
                               "value": "False", "callback": screen.reload_panels}},

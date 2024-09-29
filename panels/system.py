@@ -26,10 +26,24 @@ class Panel(ScreenPanel):
         self.target_clicks = 10
         self.grid = Gtk.Grid(column_spacing=10, row_spacing=5)
 
-        sysinfo = screen.printer.system_info
-        logging.info(sysinfo)
+        self.sysinfo = screen.printer.system_info
+        if not self.sysinfo:
+            logging.debug("Asking for info")
+            self.sysinfo = screen.apiclient.send_request("machine/system_info")
+            if 'system_info' in self.sysinfo:
+                screen.printer.system_info = self.sysinfo['system_info']
+                self.sysinfo = self.sysinfo['system_info']
+        logging.debug(self.sysinfo)
+        if self.sysinfo:
+            self.content.add(self.create_layout())
+        else:
+            self.content.add(Gtk.Label(label=_("No info available"), vexpand=True))
 
-        self.cpu_count = int(sysinfo["cpu_info"]["cpu_count"])
+    def back(self):
+        if not self.sysinfo:
+            self._screen.panels_reinit.append("system")
+        return False
+    def create_layout(self):
         self.labels["cpu_usage"] = Gtk.Label(label="", xalign=0)
         self.grid.attach(self.labels["cpu_usage"], 0, self.current_row, 1, 1)
         self.scales["cpu_usage"] = Gtk.ProgressBar(
@@ -49,9 +63,9 @@ class Panel(ScreenPanel):
 
         self.grid.attach(Gtk.Separator(), 0, self.current_row, 2, 1)
         self.current_row += 1
-        self.machine_info(sysinfo)
+        self.machine_info()
         self.current_row += 1
-        self.populate_info(sysinfo)
+        self.populate_info()
 
         scroll = self._gtk.ScrolledWindow()
         scroll.add(self.grid)
@@ -77,6 +91,7 @@ class Panel(ScreenPanel):
                 self.add_option(
                     "model", self.models, model_name, self.models[model_name]
                 )
+        return scroll
     def change_model(self, widget, event):
         self.model_config.generate_config(event)
     def on_model_click(self, widget, event):
@@ -107,7 +122,7 @@ class Panel(ScreenPanel):
         label = Gtk.Label(label=text, use_markup=True, xalign=0, wrap=True)
         self.grid.attach(label, column, self.current_row, 1, 1)
         self.current_row += 1
-    def machine_info(self, sysinfo):
+    def machine_info(self):
         self.add_label_to_grid(self.prettify("device"), 0, bold=True)
         self.current_row -= 1
         self.add_label_to_grid("Maker: CreatBot", 1)
@@ -120,8 +135,8 @@ class Panel(ScreenPanel):
         event_box.add(label)
         self.add_label_to_grid(f"Name: {self._screen.connecting_to_printer}", 1)
 
-    def populate_info(self, sysinfo):
-        for category, data in sysinfo.items():
+    def populate_info(self):
+        for category, data in self.sysinfo.items():
             if category == "python":
                 self.add_label_to_grid(self.prettify(category), 0, bold=True)
                 self.current_row -= 1
@@ -139,7 +154,7 @@ class Panel(ScreenPanel):
                     "service_state",
                     "instance_ids",
                 )
-                or not sysinfo[category]
+                or not self.sysinfo[category]
             ):
                 continue
 
@@ -175,6 +190,8 @@ class Panel(ScreenPanel):
                         self.add_label_to_grid(f"{self.prettify(key)}: {value}", 1)
 
     def process_update(self, action, data):
+        if not self.sysinfo:
+            return
         if action == "notify_proc_stat_update":
             self.labels["cpu_usage"].set_label(
                 f'CPU: {data["system_cpu_usage"]["cpu"]:.0f}%'
