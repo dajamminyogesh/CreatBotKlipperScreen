@@ -12,11 +12,6 @@ class Panel(ScreenPanel):
         self.printers = self.settings = self.langs = {}
         self.menu = ['settings_menu']
         options = self._config.get_configurable_options().copy()
-        options.append({"printers": {
-            "name": _("Printer Connections"),
-            "type": "menu",
-            "menu": "printers"
-        }})
         options.append({"lang": {
             "name": _("Language"),
             "type": "menu",
@@ -39,19 +34,5 @@ class Panel(ScreenPanel):
                 "callback": self._screen.change_language,
             }
             self.add_option("lang", self.langs, lang, self.langs[lang])
-
-        self.labels['printers_menu'] = self._gtk.ScrolledWindow()
-        self.labels['printers'] = Gtk.Grid()
-        self.labels['printers_menu'].add(self.labels['printers'])
-        for printer in self._config.get_printers():
-            pname = list(printer)[0]
-            self.printers[pname] = {
-                "name": pname,
-                "section": f"printer {pname}",
-                "type": "printer",
-                "moonraker_host": printer[pname]['moonraker_host'],
-                "moonraker_port": printer[pname]['moonraker_port'],
-            }
-            self.add_option("printers", self.printers, pname, self.printers[pname])
 
         self.content.add(self.labels['settings_menu'])
