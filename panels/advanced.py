@@ -16,6 +16,9 @@ class Panel(ScreenPanel):
             {"adaptive_leveling": {"section": "main", "name": _("Adaptive Bed Leveling"), "type": "binary",
                                "tooltip": _("Leveling Only in the Actual Print Area"),
                                "value": "True", "callback": self.set_adaptive_leveling}},
+            {"power_loss_recovery": {"section": "main", "name": _("Power Loss Recovery"), "type": "binary",
+                               "tooltip": _("Restores your print job after a power outage"),
+                               "value": "True", "callback": self.set_power_loss_recovery}},
         ]
         options = self.advanced_options
         self.labels['advanced_menu'] = self._gtk.ScrolledWindow()
@@ -28,11 +31,17 @@ class Panel(ScreenPanel):
         self.content.add(self.labels['advanced_menu'])
 
     def set_adaptive_leveling(self, *args):
-        enable_adaptive_leveling = any(args)
-        script_value = True if enable_adaptive_leveling else False
-        script = KlippyGcodes.set_save_variables("adaptive_meshing", script_value)
+        self.set_configuration_feature("adaptive_meshing", *args)
+
+    def set_power_loss_recovery(self, *args):
+        self.set_configuration_feature("power_loss_recovery", *args)
+
+    def set_configuration_feature(self, feature_name, *args):
+        enable_feature = any(args)
+        script_value = True if enable_feature else False
+        script = KlippyGcodes.set_save_variables(feature_name, script_value)
         self._screen._send_action(None, "printer.gcode.script", {"script": script})
-        logging.info(f"Set adaptive leveling: {script_value}")
+        logging.info(f"Set {feature_name}: {script_value}")
 
     def process_update(self, action, data):
         if action != "notify_status_update":
@@ -41,3 +50,5 @@ class Panel(ScreenPanel):
             variables = data['save_variables']['variables']
             if 'adaptive_meshing' in variables:
                 self.menu_list['adaptive_leveling'].set_active(variables['adaptive_meshing'])
+            if 'power_loss_recovery' in variables:
+                self.menu_list['power_loss_recovery'].set_active(variables['power_loss_recovery'])
