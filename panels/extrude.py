@@ -247,6 +247,9 @@ class Panel(ScreenPanel):
 
     def change_extruder(self, widget, extruder):
         logging.info(f"Changing extruder to {extruder}")
+        if self.labels[extruder].get_style_context().has_class("button_active"):
+            self.menu_item_clicked(None, {"panel": "numpad", 'extra': f"{extruder}"})
+            return
         for tool in self._printer.get_tools():
             self.labels[tool].get_style_context().remove_class("button_active")
         self.labels[extruder].get_style_context().add_class("button_active")
