@@ -13,7 +13,7 @@ class Panel(ScreenPanel):
     z_delta = z_deltas[-1]
     speed_deltas = ['5', '25']
     s_delta = speed_deltas[-1]
-    extrude_deltas = ['1', '2']
+    extrude_deltas = ['1', '2', '10', '50']
     e_delta = extrude_deltas[-1]
     speed = extrusion = 100
     z_offset = 0.0
