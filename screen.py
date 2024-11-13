@@ -782,6 +782,7 @@ class KlipperScreen(Gtk.Window):
             return
         self.files.refresh_files()
         self.show_panel("main_menu", remove_all=True, items=self._config.get_menu_items("__main"))
+        self._ws.klippy.gcode_script("UPDATE_DELAYED_GCODE ID=_CHECK_POWER_LOSS_RECOVERY DURATION=0.1")
 
     def state_startup(self):
         self.printer_initializing(_("Klipper is attempting to start"))
