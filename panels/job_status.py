@@ -508,12 +508,6 @@ class Panel(ScreenPanel):
                 self.labels['lcdmessage'].hide()
 
         if 'toolhead' in data:
-            if 'extruder' in data['toolhead'] and data['toolhead']['extruder'] != self.current_extruder:
-                self.labels['temp_grid'].remove_column(0)
-                self.labels['temp_grid'].insert_column(0)
-                self.current_extruder = data["toolhead"]["extruder"]
-                self.labels['temp_grid'].attach(self.buttons['extruder'][self.current_extruder], 0, 0, 1, 1)
-                self._screen.show_all()
             if "max_accel" in data["toolhead"]:
                 self.labels['max_accel'].set_label(f"{data['toolhead']['max_accel']:.0f} {self.mms2}")
         if 'extruder' in data and 'pressure_advance' in data['extruder']:
