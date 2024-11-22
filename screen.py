@@ -717,8 +717,9 @@ class KlipperScreen(Gtk.Window):
         return
 
     def show_printer_select(self, widget=None):
-        self.base_panel.show_heaters(False)
-        self.show_panel("printer_select", remove_all=True)
+        if 'printer_select' not in self._cur_panels:
+            self.base_panel.show_heaters(False)
+            self.show_panel("printer_select", remove_all=True)
 
     def websocket_connection_cancel(self):
         self.printer_initializing(
@@ -938,7 +939,8 @@ class KlipperScreen(Gtk.Window):
 
     def printer_initializing(self, msg, go_to_splash=False):
         if 'splash_screen' not in self.panels or go_to_splash:
-            self.show_panel("splash_screen", remove_all=True)
+            if self._cur_panels != ['splash_screen']:
+                self.show_panel("splash_screen", remove_all=True)
         self.panels['splash_screen'].update_text(msg)
         self.log_notification(msg, 0)
 
