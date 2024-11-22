@@ -167,7 +167,10 @@ class KlipperScreen(Gtk.Window):
         self.base_panel.activate()
         self.set_screenblanking_timeout(self._config.get_main_config().get('screen_blanking'))
         self.log_notification("KlipperScreen Started", 1)
-        self.initial_connection()
+
+        lang = self._config.get_main_config().get("language", 'system_lang')
+        (self.show_language_select() if lang == 'system_lang' else self.initial_connection())
+
 
     def state_execute(self, state, callback):
         self.close_screensaver()
@@ -715,6 +718,9 @@ class KlipperScreen(Gtk.Window):
             os.system("xset -display :0 dpms 0 0 0")
         self.reset_screensaver_timeout()
         return
+
+    def show_language_select(self, widget=None):
+        self.show_panel("language_select", remove_all=True)
 
     def show_printer_select(self, widget=None):
         if 'printer_select' not in self._cur_panels:
