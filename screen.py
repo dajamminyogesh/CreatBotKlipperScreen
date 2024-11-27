@@ -722,6 +722,9 @@ class KlipperScreen(Gtk.Window):
     def show_language_select(self, widget=None):
         self.show_panel("language_select", remove_all=True)
 
+    def show_onboarding(self, widget=None):
+        self.show_panel("onboarding", remove_all=True)
+
     def show_printer_select(self, widget=None):
         if 'printer_select' not in self._cur_panels:
             self.base_panel.show_heaters(False)
@@ -788,8 +791,12 @@ class KlipperScreen(Gtk.Window):
             self.printer.state = "not ready"
             return
         self.files.refresh_files()
-        self.show_panel("main_menu", remove_all=True, items=self._config.get_menu_items("__main"))
-        self._ws.klippy.gcode_script("UPDATE_DELAYED_GCODE ID=_CHECK_POWER_LOSS_RECOVERY DURATION=0.1")
+        guided = self._config.get_main_config().get("onboarding", False)
+        if guided == 'True':
+            self.show_onboarding()
+        else:
+            self.show_panel("main_menu", remove_all=True, items=self._config.get_menu_items("__main"))
+            self._ws.klippy.gcode_script("UPDATE_DELAYED_GCODE ID=_CHECK_POWER_LOSS_RECOVERY DURATION=0.1")
 
     def state_startup(self):
         self.printer_initializing(_("Klipper is attempting to start"))
